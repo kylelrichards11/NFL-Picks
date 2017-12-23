@@ -10,7 +10,14 @@
       <ul>
         <li *ngFor="let game of currentWeek">
           <div class="row">
-            {{game.away}} @ {{game.home}}
+            <div class="card">
+              <div class="card-content">
+                <img class="logo" [src]="game.awayImgPath">
+                {{game.away}} @ 
+                <img class="logo" [src]="game.homeImgPath">
+                {{game.home}}
+              </div>
+            </div>
           </div>
         </li>
       </ul>

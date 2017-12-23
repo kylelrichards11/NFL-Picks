@@ -3,6 +3,8 @@ export class Game {
         public home: string,
         public away: string,
         public date: string,
-        public time: string
+        public time: string,
+        public homeImgPath: string,
+        public awayImgPath: string
     ) { }
 }
