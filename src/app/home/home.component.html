@@ -8,7 +8,7 @@
   <div class="row center-align">
     <div class="container">
       <ul>
-        <li *ngFor="let game of currentWeek">
+        <li *ngFor="let game of gameArray">
           <div class="row">
             <div class="card">
               <div class="card-content">
@@ -22,5 +22,8 @@
         </li>
       </ul>
     </div>
+  </div>
+  <div class="row">
+    <p>wins = {{ team.wins }}</p>
   </div>
 </div>
