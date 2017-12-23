@@ -12,18 +12,34 @@
           <div class="row">
             <div class="card">
               <div class="card-content">
-                <img class="logo" [src]="game.awayImgPath">
-                {{game.away}} @ 
-                <img class="logo" [src]="game.homeImgPath">
-                {{game.home}}
+                <div class="row">
+                  <div class="col s5 center-align">
+                    <img class="logo" [src]="game.awayImgPath">
+                  </div>
+                  <div class="col s2"></div>
+                  <div class="col s5 center-align">
+                    <img class="logo" [src]="game.homeImgPath">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s5 center-align">
+                    <p>{{game.away.city}} {{game.away.name}} ({{game.away.wins}} - {{game.away.losses}})</p>
+                  </div>
+                  <div class="col s2 center-align">
+                    <p>@</p>
+                  </div>
+                  <div class="col s5 center-align">
+                    <p>{{game.home.city}} {{game.home.name}} ({{game.home.wins}} - {{game.home.losses}})</p>
+                  </div>
+                </div>
+                <div class="row center-align">
+                  <p class="gameTime">{{game.date}}, {{game.time}} EST</p>
+                </div>
               </div>
             </div>
           </div>
         </li>
       </ul>
     </div>
-  </div>
-  <div class="row">
-    <p>wins = {{ team.wins }}</p>
   </div>
 </div>
