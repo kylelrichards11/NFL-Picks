@@ -6,6 +6,14 @@
     <h1>This Week's Games</h1>
   </div>
   <div class="row center-align">
-    Games...
+    <div class="container">
+      <ul>
+        <li *ngFor="let game of currentWeek">
+          <div class="row">
+            {{game.away}} @ {{game.home}}
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

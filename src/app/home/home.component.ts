@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../services/database.service';
+import { DatabaseReference } from 'angularfire2/database/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  currentWeek;
+
+  constructor(public dbSrv: DatabaseService) { }
 
   ngOnInit() {
+    this.currentWeek = this.dbSrv.getWeekFromDb("week16");
   }
 
 }
