@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { DatabaseService } from './services/database.service';
 import { AuthService } from './services/auth.service';
 
+// GUARDS
+import { AuthGuard } from './guards/auth.guard';
+
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +25,8 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 
 
@@ -34,7 +39,8 @@ import { SignupComponent } from './signup/signup.component';
     MenuBarComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +51,7 @@ import { SignupComponent } from './signup/signup.component';
     AngularFirestoreModule,
     FormsModule
   ],
-  providers: [DatabaseService, AuthService],
+  providers: [DatabaseService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
