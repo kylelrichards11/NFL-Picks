@@ -4,13 +4,16 @@
       <a routerLink="/home" class="brand-logo left">NFL Picks</a>
       <ul id="nav-mobile" class="right">
         <li>
-          <a routerLink="/plan-trip">Make Your Picks</a>
+          <a routerLink="/home">See Previous Weeks</a>
         </li>
         <li>
-          <a routerLink="/contact-us">See Previous Picks</a>
+          <a routerLink="/login">Login</a>
         </li>
         <li>
-          <a routerLink="/home">Login</a>
+          <a routerLink="/signup">Sign Up</a>
+        </li>
+        <li>
+          <a (click)="signout()">Sign Out</a>
         </li>
       </ul>
     </div>

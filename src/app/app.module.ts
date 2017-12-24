@@ -9,15 +9,22 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { FormsModule } from '@angular/forms';
+
+// SERVICES
+import { DatabaseService } from './services/database.service';
+import { AuthService } from './services/auth.service';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
-// SERVICES
-import {DatabaseService } from './services/database.service';
+
+
 
 
 @NgModule({
@@ -25,7 +32,9 @@ import {DatabaseService } from './services/database.service';
     AppComponent,
     HomeComponent,
     MenuBarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +42,10 @@ import {DatabaseService } from './services/database.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
-  providers: [DatabaseService],
+  providers: [DatabaseService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

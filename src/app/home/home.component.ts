@@ -36,9 +36,4 @@ export class HomeComponent implements OnInit {
 
 
   }
-
-  getTeamRecord(teamName) {
-    return this.dbSrv.getTeamWinLoss(teamName);
-  }
-
 }
