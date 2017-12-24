@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GamesComponent } from './games/games.component';
 
 
 
@@ -40,7 +41,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,

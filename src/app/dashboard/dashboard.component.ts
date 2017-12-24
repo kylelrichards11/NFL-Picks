@@ -13,13 +13,12 @@ export class DashboardComponent implements OnInit {
   constructor(public authService: AuthService, public adb: AngularFireDatabase) { }
 
   userId;
-
-  userHistory = new UserData('?', '?', '?', 0, 0, new Array());
+  userHistory = '?';
 
   ngOnInit() {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
-      this.adb.object<UserData>('/users/' + this.userId).valueChanges().subscribe(user => {
+      this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
         console.log("user: ", user);
         this.userHistory = user;
       });

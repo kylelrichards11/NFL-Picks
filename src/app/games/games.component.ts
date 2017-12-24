@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../services/database.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { DatabaseReference } from 'angularfire2/database/interfaces';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Game } from '../classes/game';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-games',
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.css']
 })
-export class HomeComponent implements OnInit {
+export class GamesComponent implements OnInit {
+
+  @Input() weekId: string;
 
   gameArray = new Array();
-  weekNum = 'week16';
 
-  constructor(public dbSrv: DatabaseService, public adb: AngularFireDatabase) { }
+  constructor(public adb: AngularFireDatabase) { }
 
   ngOnInit() {
 
-    this.adb.list<Game>('/2017-2018/' + this.weekNum).valueChanges().subscribe(games => {
+    this.adb.list<Game>('/2017-2018/' + this.weekId).valueChanges().subscribe(games => {
       this.gameArray = [];
       games.forEach(game => {
 
@@ -33,4 +33,5 @@ export class HomeComponent implements OnInit {
 
 
   }
+
 }

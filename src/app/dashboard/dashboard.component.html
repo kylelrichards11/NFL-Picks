@@ -1,6 +1,19 @@
 <div class="container">
   <div class="row center-align">
     <h2>Dashboard</h2>
-    <h3>All Time Record: {{userHistory.correct}}</h3>
+  </div>
+  <div class="row">
+    <div class="col s12 m6 center-align">
+      <h4>Pick History</h4>
+      <div class="row">
+        <h5>All Time Record:</h5>
+      </div>
+      <div class="row">
+        {{userHistory.correct}} - {{userHistory.incorrect}}
+      </div>
+    </div>
+    <div class="col s12 m6 center-align">
+      <h4>This Week's Picks</h4>
+    </div>
   </div>
 </div>
