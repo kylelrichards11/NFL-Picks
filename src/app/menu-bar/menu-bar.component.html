@@ -6,13 +6,13 @@
         <li>
           <a routerLink="/home">See Previous Weeks</a>
         </li>
-        <li>
+        <li *ngIf="!authService.isAuthenticated()">
           <a routerLink="/login">Login</a>
         </li>
-        <li>
+        <li *ngIf="!authService.isAuthenticated()">
           <a routerLink="/signup">Sign Up</a>
         </li>
-        <li>
+        <li *ngIf="authService.isAuthenticated()">
           <a (click)="signout()">Sign Out</a>
         </li>
       </ul>

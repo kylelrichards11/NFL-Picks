@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   loginWithEmail(email, password) {
     this.authService.loginWithEmail(email, password).then(() => {
-      this.router.navigate(['home']);
+      this.router.navigate(['dashboard']);
       this.authService.authenticated = true;
 
     }).catch(function (error: any) {
