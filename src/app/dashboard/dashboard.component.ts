@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { UserData, Season, Week, UserGame } from '../classes/user-data';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthService, public adb: AngularFireDatabase) { }
+
+  userId;
+
+  userHistory = new UserData('?', '?', '?', 0, 0, new Array());
 
   ngOnInit() {
+    this.authService.getUserId().subscribe(user_id => {
+      this.userId = user_id;
+      this.adb.object<UserData>('/users/' + this.userId).valueChanges().subscribe(user => {
+        console.log("user: ", user);
+        this.userHistory = user;
+      });
+    });
   }
 
 }

@@ -13,8 +13,6 @@ import { Team } from '../classes/team';
 export class HomeComponent implements OnInit {
 
   gameArray = new Array();
-  teamArray = new Array();
-  team = new Team('?', '?', '?', '?', false);
   weekNum = 'week16';
 
   constructor(public dbSrv: DatabaseService, public adb: AngularFireDatabase) { }
