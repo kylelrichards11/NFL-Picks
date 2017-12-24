@@ -19,7 +19,6 @@ export class DashboardComponent implements OnInit {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
-        console.log("user: ", user);
         this.userHistory = user;
       });
     });
