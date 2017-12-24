@@ -17,7 +17,7 @@ export class GamesComponent implements OnInit {
   @Input() userId: string;
 
   gameArray = new Array();
-  userHistory = '?';
+  userWeekPicks = false;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -39,11 +39,12 @@ export class GamesComponent implements OnInit {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
-        this.userHistory = user;
+        this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId].games;
+        console.log("seasons: ", this.userWeekPicks);
       });
     });
 
-
+    
   }
 
   pickTeam(teamCity, teamName, gameId) {

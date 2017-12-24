@@ -1,5 +1,6 @@
 <div class="row center-align">
-  <div class="container">
+  <div *ngIf="userWeekPicks" class="container">
+    <!-- ngIf so we don't load games until we have read from database -->
     <ul>
       <li *ngFor="let game of gameArray">
         <div class="row">
@@ -27,13 +28,34 @@
                   <p>({{game.home.wins}} - {{game.home.losses}})</p>
                 </div>
               </div>
-              <div *ngIf="makePicks" class="row">
-                <div class="col s5 center-align">
-                  <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+              <div *ngIf="makePicks">
+                <div *ngIf="userWeekPicks[game.gameId]" class="row">
+                  <div class="col s5">
+                    <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Picked</a>
+                    </div>
+                    <div *ngIf="userWeekPicks[game.gameId].pick != game.away.city + ' ' + game.away.name">
+                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                    </div>
+                  </div>
+                  <div class="col s2"></div>
+                  <div class="col s5">
+                    <div *ngIf="userWeekPicks[game.gameId].pick == game.home.city + ' ' + game.home.name">
+                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Picked</a>
+                    </div>
+                    <div *ngIf="userWeekPicks[game.gameId].pick != game.home.city + ' ' + game.home.name">
+                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col s2"></div>
-                <div class="col s5 center-align">
-                  <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
+                <div *ngIf="!userWeekPicks[game.gameId]" class="row">
+                  <div class="col s5">
+                    <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                  </div>
+                  <div class="col s2"></div>
+                  <div class="col s5">
+                    <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                  </div>
                 </div>
               </div>
               <div class="row center-align">
