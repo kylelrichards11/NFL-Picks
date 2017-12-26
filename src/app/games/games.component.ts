@@ -18,6 +18,7 @@ export class GamesComponent implements OnInit {
 
   gameArray = new Array();
   userWeekPicks = false;
+  gotData = false;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -39,6 +40,7 @@ export class GamesComponent implements OnInit {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
+        this.gotData = true;
         this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId].games;
         console.log("seasons: ", this.userWeekPicks);
       });
@@ -53,4 +55,8 @@ export class GamesComponent implements OnInit {
     this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({pick: pick});
   }
 
+
+  displayInfo(){
+    console.log(this.gotData);
+  }
 }
