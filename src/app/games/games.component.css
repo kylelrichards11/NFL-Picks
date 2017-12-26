@@ -16,7 +16,15 @@ p {
 }
 
 .picked { 
+    background-color: #424ef4;
+}
+
+.correctPick { 
     background-color: #228B22;
+}
+
+.incorrectPick {
+    background-color: #f44242;
 }
 
 .recordDisplay {

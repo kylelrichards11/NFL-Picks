@@ -34,7 +34,7 @@ export class GamesComponent implements OnInit {
         var homeImgPath = "../assets/teamLogos/" + game.home.name.toLowerCase() + ".png"
         var awayImgPath = "../assets/teamLogos/" + game.away.name.toLowerCase() + ".png"
 
-        let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, homeImgPath, awayImgPath);
+        let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, game.ended, homeImgPath, awayImgPath);
         this.gameArray.push(uniqueGame);
 
         if(!foundStarted) {

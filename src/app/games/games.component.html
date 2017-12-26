@@ -49,9 +49,30 @@
                     <!-- if the user has made a pick for this game yet -->
                     <div *ngIf="userWeekPicks.games[game.gameId]" class="row">
                       <div class="col s5">
-                        <!-- if the user picked away team -->
-                        <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
-                          <a class="waves-effect waves-light btn picked" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Picked</a>
+
+                        <!-- if the game has ended -->
+                        <div *ngIf="game.ended">
+                          <!-- if the user picked away team -->
+                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
+
+                            <!-- if the away team won -->
+                            <div *ngIf="game.away.winner">
+                              <a class="waves-effect waves-light btn correctPick" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Correct!</a>
+                            </div>
+
+                            <!-- if the away team did not win -->
+                            <div *ngIf="!game.away.winner">
+                                <a class="waves-effect waves-light btn incorrectPick" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Incorrect</a>
+                              </div>
+                          </div>
+                        </div>
+
+                        <!-- if the game has not ended -->
+                        <div *ngIf="!game.ended">
+                          <!-- if the user picked away team -->
+                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                            <a class="waves-effect waves-light btn picked" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Picked</a>
+                          </div>
                         </div>
                         <!-- if the user did not pick away team -->
                         <div *ngIf="userWeekPicks.games[game.gameId].pick != game.away.city + ' ' + game.away.name">

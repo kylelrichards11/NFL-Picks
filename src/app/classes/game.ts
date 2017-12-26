@@ -8,6 +8,7 @@ export class Game {
         public date: string,
         public time: string,
         public started: boolean,
+        public ended: boolean,
         public homeImgPath: string,
         public awayImgPath: string
     ) { }
