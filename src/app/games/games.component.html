@@ -1,6 +1,8 @@
 <div class="row center-align">
   <div class="container">
-    <!-- ngIf so we don't load games until we have read from database -->
+    <div class="row">
+        <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
+    </div>
     <ul>
       <li *ngFor="let game of gameArray">
         <div class="row">
@@ -72,6 +74,8 @@
                 </div>
               </div>
               <div class="row center-align">
+                <br>
+                <br>
                 <p class="gameTime">{{game.date}}, {{game.time}} EST</p>
               </div>
             </div>
@@ -79,8 +83,5 @@
         </div>
       </li>
     </ul>
-  </div>
-  <div class="row">
-    <button (click)="displayInfo()">Click Me</button>
   </div>
 </div>

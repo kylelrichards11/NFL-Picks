@@ -55,8 +55,7 @@ export class GamesComponent implements OnInit {
     this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({pick: pick});
   }
 
-
-  displayInfo(){
-    console.log(this.gotData);
+  clearPicks() {
+    this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/').remove();
   }
 }
