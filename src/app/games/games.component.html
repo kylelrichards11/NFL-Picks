@@ -1,14 +1,16 @@
 <div class="row center-align">
   <div class="container">
-    <div *ngIf="!weekHasStarted" class="row">
-      <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
-    </div>
-    <div *ngIf="weekHasStarted">
-      <div class="recordDisplay" *ngIf="gotData">
-        Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
+    <div *ngIf="makePicks">
+      <div *ngIf="!weekHasStarted" class="row">
+        <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
       </div>
-      <div *ngIf="!gotData">
-        Record: 0 - 0
+      <div *ngIf="weekHasStarted">
+        <div class="recordDisplay" *ngIf="gotData">
+          Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
+        </div>
+        <div *ngIf="!gotData">
+          Record: 0 - 0
+        </div>
       </div>
     </div>
     <ul>
@@ -62,8 +64,8 @@
 
                             <!-- if the away team did not win -->
                             <div *ngIf="!game.away.winner">
-                                <a class="waves-effect waves-light btn incorrectPick" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Incorrect</a>
-                              </div>
+                              <a class="waves-effect waves-light btn incorrectPick" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Incorrect</a>
+                            </div>
                           </div>
                         </div>
 
