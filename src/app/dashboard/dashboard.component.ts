@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(public authService: AuthService, public adb: AngularFireDatabase) { }
 
   userId;
-  userHistory = '?';
+  userHistory;
 
   ngOnInit() {
     this.authService.getUserId().subscribe(user_id => {

@@ -7,7 +7,7 @@
       <div class="row">
         <h4>All Time Pick Record</h4>
       </div>
-      <div class="row">
+      <div *ngIf="userHistory" class="row">
         {{userHistory.correct}} - {{userHistory.incorrect}}
       </div>
     </div>
