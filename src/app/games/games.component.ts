@@ -19,6 +19,7 @@ export class GamesComponent implements OnInit {
   gameArray = new Array();
   userWeekPicks = false;
   gotData = false;
+  weekHasStarted = true;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -32,7 +33,7 @@ export class GamesComponent implements OnInit {
         var homeImgPath = "../assets/teamLogos/" + game.home.name.toLowerCase() + ".png"
         var awayImgPath = "../assets/teamLogos/" + game.away.name.toLowerCase() + ".png"
 
-        let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, homeImgPath, awayImgPath);
+        let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, homeImgPath, awayImgPath);
         this.gameArray.push(uniqueGame);
       })
     });
@@ -41,8 +42,7 @@ export class GamesComponent implements OnInit {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
         this.gotData = true;
-        this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId].games;
-        console.log("seasons: ", this.userWeekPicks);
+        this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
       });
     });
 
@@ -50,7 +50,6 @@ export class GamesComponent implements OnInit {
   }
 
   pickTeam(teamCity, teamName, gameId) {
-    console.log(gameId, this.userId);
     var pick = teamCity + " " + teamName;
     this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({pick: pick});
   }

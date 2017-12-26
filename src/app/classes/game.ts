@@ -7,6 +7,7 @@ export class Game {
         public gameId: string,
         public date: string,
         public time: string,
+        public started: boolean,
         public homeImgPath: string,
         public awayImgPath: string
     ) { }

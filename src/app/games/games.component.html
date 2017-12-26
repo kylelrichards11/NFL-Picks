@@ -1,7 +1,15 @@
 <div class="row center-align">
   <div class="container">
-    <div class="row">
-        <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
+    <div *ngIf="!weekHasStarted" class="row">
+      <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
+    </div>
+    <div *ngIf="weekHasStarted">
+      <div *ngIf="gotData">
+        Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
+      </div>
+      <div *ngIf="!gotData">
+        Record: 0 - 0
+      </div>
     </div>
     <ul>
       <li *ngFor="let game of gameArray">
@@ -31,51 +39,83 @@
                 </div>
               </div>
               <div *ngIf="makePicks">
+
+                <!-- if data has loaded -->
                 <div *ngIf="gotData">
-                  <div *ngIf="userWeekPicks">
-                    <div *ngIf="userWeekPicks[game.gameId]" class="row">
+
+                  <!-- if the user has made any picks for this week yet -->
+                  <div *ngIf="userWeekPicks.games">
+
+                    <!-- if the user has made a pick for this game yet -->
+                    <div *ngIf="userWeekPicks.games[game.gameId]" class="row">
                       <div class="col s5">
-                        <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                        <!-- if the user picked away team -->
+                        <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
                           <a class="waves-effect waves-light btn picked" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Picked</a>
                         </div>
-                        <div *ngIf="userWeekPicks[game.gameId].pick != game.away.city + ' ' + game.away.name">
+                        <!-- if the user did not pick away team -->
+                        <div *ngIf="userWeekPicks.games[game.gameId].pick != game.away.city + ' ' + game.away.name">
+
+                          <!-- if the game has not yet started -->
+                          <div *ngIf="!game.started">
+                            <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s2"></div>
+                      <div class="col s5">
+                        <!-- if the user picked home team -->
+                        <div *ngIf="userWeekPicks.games[game.gameId].pick == game.home.city + ' ' + game.home.name">
+                          <a class="waves-effect waves-light btn picked" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Picked</a>
+                        </div>
+                        <!-- if the user did not pick home team -->
+                        <div *ngIf="userWeekPicks.games[game.gameId].pick != game.home.city + ' ' + game.home.name">
+
+                          <!-- if the game has not yet started -->
+                          <div *ngIf="!game.started">
+                            <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- if the user has not made a pick for this game yet -->
+                    <div *ngIf="!userWeekPicks.games[game.gameId]" class="row">
+                      <div class="col s5">
+                        <!-- if the game has not yet started -->
+                        <div *ngIf="!game.started">
                           <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
                         </div>
                       </div>
                       <div class="col s2"></div>
                       <div class="col s5">
-                        <div *ngIf="userWeekPicks[game.gameId].pick == game.home.city + ' ' + game.home.name">
-                          <a class="waves-effect waves-light btn picked" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Picked</a>
-                        </div>
-                        <div *ngIf="userWeekPicks[game.gameId].pick != game.home.city + ' ' + game.home.name">
+                        <!-- if the game has not yet started -->
+                        <div *ngIf="!game.started">
                           <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
                         </div>
                       </div>
                     </div>
-                    <div *ngIf="!userWeekPicks[game.gameId]" class="row">
-                      <div class="col s5">
+                  </div>
+
+                  <!-- if the user has not made a pick for this week yet -->
+                  <div *ngIf="!userWeekPicks.games" class="row">
+                    <div class="col s5">
+                      <!-- if the game has not yet started -->
+                      <div *ngIf="!game.started">
                         <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
                       </div>
-                      <div class="col s2"></div>
-                      <div class="col s5">
-                        <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div *ngIf="!userWeekPicks">
-                    <div class="col s5">
-                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
                     </div>
                     <div class="col s2"></div>
                     <div class="col s5">
-                      <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
+                      <!-- if the game has not yet started -->
+                      <div *ngIf="!game.started">
+                        <a class="waves-effect waves-light btn" (click)="pickTeam(game.home.city, game.home.name, game.gameId)">Choose</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row center-align">
-                <br>
-                <br>
                 <p class="gameTime">{{game.date}}, {{game.time}} EST</p>
               </div>
             </div>
