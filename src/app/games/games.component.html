@@ -4,7 +4,7 @@
       <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
     </div>
     <div *ngIf="weekHasStarted">
-      <div *ngIf="gotData">
+      <div class="recordDisplay" *ngIf="gotData">
         Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
       </div>
       <div *ngIf="!gotData">

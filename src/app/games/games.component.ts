@@ -19,7 +19,7 @@ export class GamesComponent implements OnInit {
   gameArray = new Array();
   userWeekPicks = false;
   gotData = false;
-  weekHasStarted = true;
+  weekHasStarted = false;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -27,6 +27,7 @@ export class GamesComponent implements OnInit {
 
     this.adb.list<Game>('/' + this.seasonId + '/' + this.weekId).valueChanges().subscribe(games => {
       this.gameArray = [];
+      var foundStarted = false;
       games.forEach(game => {
 
         //get home and away team name without city for image name
@@ -35,6 +36,13 @@ export class GamesComponent implements OnInit {
 
         let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, homeImgPath, awayImgPath);
         this.gameArray.push(uniqueGame);
+
+        if(!foundStarted) {
+          if(game.started) {
+            this.weekHasStarted = true;
+            foundStarted = true;
+          }
+        }
       })
     });
 
