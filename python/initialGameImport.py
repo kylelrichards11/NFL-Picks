@@ -74,8 +74,9 @@ for i in range(0, 3):
         for k in range(0, max):
             teamA = obj.ss.gms.g[k]['v']
             teamH = obj.ss.gms.g[k]['h']
+            xmlId = obj.ss.gms.g[k]['gsis']
             print teams[teamA].city, teams[teamA].name, "@", teams[teamH].city, teams[teamH].name
-            dbPath = seasonDbArray[i] + '/week' + str(j) + '/game' + str(k)
+            dbPath = seasonDbArray[i] + '/week' + str(j) + '/' + str(xmlId)
             date = obj.ss.gms.g[k]['eid']
             month = monthsArray[int(date[4] + date[5])-1]
             day = date[6] + date[7]
@@ -121,7 +122,7 @@ for i in range(0, 3):
                 },
                 'date' : month + ' ' + day + ' ' + year,
                 'time' : time,
-                'gameId' : 'game' + str(k),
+                'gameId' : xmlId,
                 'started' : started,
                 'ended' : finished
             })

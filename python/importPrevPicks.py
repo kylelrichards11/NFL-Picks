@@ -83,6 +83,8 @@ dadUID = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
 UIDs = [kyleUID, dadUID]
 userNames = ['Kyle', 'Dad']
 usersNum = len(UIDs)
+gameIds = [56502, 56900, 57233]
+gameIdsIndex = 0
 
 max = len(obj.root)
 
@@ -94,6 +96,7 @@ for user in range(0, usersNum):
     weekIncorrectCount = 0
     seasonCorrect = 0
     seasonIncorrect = 0
+    gameIdsIndex = 0
     for i in range(0, max):
         if prevSeason != obj.root.row[i]['Season']:
             dbSeasonUserPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season']
@@ -109,6 +112,8 @@ for user in range(0, usersNum):
                 })
             seasonCorrect = 0
             seasonIncorrect = 0
+            gameId = gameIds[gameIdsIndex]
+            gameIdsIndex += 1
             prevSeason = obj.root.row[i]['Season']
         if prevWeek != obj.root.row[i]['Week']:
             prevWeek = obj.root.row[i]['Week']
@@ -124,17 +129,23 @@ for user in range(0, usersNum):
             gamesInWeek = len(week)
             lastGameInWeek = firstGameInWeek + gamesInWeek
             for j in range (0, gamesInWeek):
-                dbPathHomeCity = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/game' + str(j) + '/home/city')
-                dbPathHomeName = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/game' + str(j) + '/home/name')
-                dbPathAwayCity = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/game' + str(j) + '/away/city')
-                dbPathAwayName = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/game' + str(j) + '/away/name')
+                gameId += 1
+                if gameId == 57241 and weekId == 'week1': #dealing with buccaneers dolphins postponed game
+                    gameId = 57242
+                if gameId == 57242 and weekId == 'week11':
+                    gameId = 57381
+                elif gameId == 57381:
+                    gameId = 57241
+                dbPathHomeCity = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/' + str(gameId) + '/home/city')
+                dbPathHomeName = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/' + str(gameId) + '/home/name')
+                dbPathAwayCity = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/' + str(gameId) + '/away/city')
+                dbPathAwayName = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week'] + '/' + str(gameId) + '/away/name')
                 homeCity = root.child(dbPathHomeCity).get()
                 homeName = root.child(dbPathHomeName).get()
                 homeBoth = homeCity + ' ' + homeName
                 awayCity = root.child(dbPathAwayCity).get()
                 awayName = root.child(dbPathAwayName).get()
                 awayBoth = awayCity + ' ' + awayName
-                gameId = 'game' + str(j)
                 for k in range(firstGameInWeek, lastGameInWeek):
                     userName = userNames[user]
                     userPick = obj.root.row[k][userName]
@@ -151,7 +162,7 @@ for user in range(0, usersNum):
                         else:
                             userPick = "San Diego Chargers"
                     if userPick in homeBoth or userPick in awayBoth:
-                        dbSetUserPickPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/games/' + gameId
+                        dbSetUserPickPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/' + str(gameId)
                         if userPick == homeBoth or userPick == awayBoth:
                             newPick = root.child(dbSetUserPickPath).set({
                                 'pick' : userPick
@@ -163,14 +174,14 @@ for user in range(0, usersNum):
                             })
                             print gameId
                         if userPick == homeBoth:
-                            dbPathHome = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week']) + '/' + gameId + '/home/winner'
+                            dbPathHome = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week']) + '/' + str(gameId) + '/home/winner'
                             correct = root.child(dbPathHome).get()
                             if correct:
                                 weekCorrectCount += 1
                             else:
                                 weekIncorrectCount += 1
                         elif userPick == awayBoth:
-                            dbPathAway = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week']) + '/' + gameId + '/away/winner'
+                            dbPathAway = obj.root.row[i]['Season'] + '/week' + str(obj.root.row[i]['Week']) + '/' + str(gameId) + '/away/winner'
                             correct = root.child(dbPathAway).get()
                             if correct:
                                 weekCorrectCount += 1

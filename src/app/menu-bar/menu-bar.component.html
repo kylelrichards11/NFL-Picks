@@ -4,7 +4,29 @@
       <a routerLink="/home" class="brand-logo left">NFL Picks</a>
       <ul id="nav-mobile" class="right">
         <li>
-          <a routerLink="/home">See Previous Weeks</a>
+          <!-- Dropdown Trigger -->
+          <a materialize="dropdown" class="dropdown-button" href="#" data-activates="dropdownSeasons" data-beloworigin="true" data-constrainWidth="false">Previous Seasons</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdownSeasons' class='dropdown-content'>
+            <li>
+              <a routerLink="/seasons/2015-2016" class="black-text">
+                <div>2015-2016</div>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/seasons/2016-2017" class="black-text">
+                <div>2016-2017</div>
+              </a>
+            </li>
+            <li>
+              <a routerLink="/seasons/2017-2018" class="black-text">
+                <div>2017-2018</div>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/home">Previous Weeks</a>
         </li>
         <li *ngIf="!authService.isAuthenticated()">
           <a routerLink="/login">Login</a>

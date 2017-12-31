@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GamesComponent } from './games/games.component';
+import { SeasonComponent } from './season/season.component';
 
 
 
@@ -42,7 +43,8 @@ import { GamesComponent } from './games/games.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    GamesComponent
+    GamesComponent,
+    SeasonComponent
   ],
   imports: [
     BrowserModule,
