@@ -1,0 +1,755 @@
+<?xml version="1.0"?>
+<root>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="1"></row>
+<row Dad="Colts" Kyle="Colts" Season="2015-2016" Week="1"></row>
+<row Dad="Green Bay" Kyle="Packers" Season="2015-2016" Week="1"></row>
+<row Dad="Kansas" Kyle="Chiefs" Season="2015-2016" Week="1"></row>
+<row Dad="Carolina" Kyle="Panthers" Season="2015-2016" Week="1"></row>
+<row Dad="Cleveland" Kyle="Browns" Season="2015-2016" Week="1"></row>
+<row Dad="St. Louis" Kyle="Seahawks" Season="2015-2016" Week="1"></row>
+<row Dad="Miami" Kyle="Dolphins" Season="2015-2016" Week="1"></row>
+<row Dad="Arizona" Kyle="Saints" Season="2015-2016" Week="1"></row>
+<row Dad="San Diego" Kyle="Lions" Season="2015-2016" Week="1"></row>
+<row Dad="Denver" Kyle="Ravens" Season="2015-2016" Week="1"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2015-2016" Week="1"></row>
+<row Dad="Tampa" Kyle="Titans" Season="2015-2016" Week="1"></row>
+<row Dad="Dallas" Kyle="Cowboys" Season="2015-2016" Week="1"></row>
+<row Dad="Minnesota" Kyle="Vikings" Season="2015-2016" Week="1"></row>
+<row Dad="Eagles" Kyle="Falcons" Season="2015-2016" Week="1"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2015-2016" Week="2"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="2"></row>
+<row Dad="Panthers" Kyle="Texans" Season="2015-2016" Week="2"></row>
+<row Dad="Arizona" Kyle="Cardinals" Season="2015-2016" Week="2"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2015-2016" Week="2"></row>
+<row Dad="Cleveland" Kyle="Titans" Season="2015-2016" Week="2"></row>
+<row Dad="Detroit" Kyle="Lions" Season="2015-2016" Week="2"></row>
+<row Dad="Saints" Kyle="Saints" Season="2015-2016" Week="2"></row>
+<row Dad="Giants" Kyle="Falcons" Season="2015-2016" Week="2"></row>
+<row Dad="49ers" Kyle="Steelers" Season="2015-2016" Week="2"></row>
+<row Dad="Rams" Kyle="Rams" Season="2015-2016" Week="2"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2015-2016" Week="2"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2015-2016" Week="2"></row>
+<row Dad="Eagles" Kyle="Cowboys" Season="2015-2016" Week="2"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="2"></row>
+<row Dad="Colts" Kyle="Colts" Season="2015-2016" Week="2"></row>
+<row Dad="Giants" Kyle="Redskins" Season="2015-2016" Week="3"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2015-2016" Week="3"></row>
+<row Dad="Browns" Kyle="Raiders" Season="2015-2016" Week="3"></row>
+<row Dad="Falcons" Kyle="Cowboys" Season="2015-2016" Week="3"></row>
+<row Dad="Texans" Kyle="Texans" Season="2015-2016" Week="3"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2015-2016" Week="3"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="3"></row>
+<row Dad="Eagles" Kyle="Jets" Season="2015-2016" Week="3"></row>
+<row Dad="Colts" Kyle="Titans" Season="2015-2016" Week="3"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2015-2016" Week="3"></row>
+<row Dad="Ravens" Kyle="Bengals" Season="2015-2016" Week="3"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2015-2016" Week="3"></row>
+<row Dad="Dolphins" Kyle="Bills" Season="2015-2016" Week="3"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2015-2016" Week="3"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2015-2016" Week="3"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="3"></row>
+<row Dad="Ravens" Kyle="Steelers" Season="2015-2016" Week="4"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2015-2016" Week="4"></row>
+<row Dad="Bills" Kyle="Bills" Season="2015-2016" Week="4"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2015-2016" Week="4"></row>
+<row Dad="Chiefs" Kyle="Bengals" Season="2015-2016" Week="4"></row>
+<row Dad="Colts" Kyle="Colts" Season="2015-2016" Week="4"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2015-2016" Week="4"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2015-2016" Week="4"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2015-2016" Week="4"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2015-2016" Week="4"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2015-2016" Week="4"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="4"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2015-2016" Week="4"></row>
+<row Dad="Jets" Kyle="Jets" Season="2015-2016" Week="4"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2015-2016" Week="4"></row>
+<row Dad="Texans" Kyle="Texans" Season="2015-2016" Week="5"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2015-2016" Week="5"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2015-2016" Week="5"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="5"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2015-2016" Week="5"></row>
+<row Dad="Bills" Kyle="Bills" Season="2015-2016" Week="5"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2015-2016" Week="5"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2015-2016" Week="5"></row>
+<row Dad="Buccaneers" Kyle="Buccaneers" Season="2015-2016" Week="5"></row>
+<row Dad="Detroit" Kyle="Cardinals" Season="2015-2016" Week="5"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="5"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2015-2016" Week="5"></row>
+<row Dad="Giants" Kyle="Giants" Season="2015-2016" Week="5"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2015-2016" Week="5"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2015-2016" Week="6"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2015-2016" Week="6"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2015-2016" Week="6"></row>
+<row Dad="Lions" Kyle="Lions" Season="2015-2016" Week="6"></row>
+<row Dad="Texans" Kyle="Texans" Season="2015-2016" Week="6"></row>
+<row Dad="Kansas" Kyle="Vikings" Season="2015-2016" Week="6"></row>
+<row Dad="Jets" Kyle="Jets" Season="2015-2016" Week="6"></row>
+<row Dad="Miami" Kyle="Titans" Season="2015-2016" Week="6"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2015-2016" Week="6"></row>
+<row Dad="Seahawks" Kyle="Panthers" Season="2015-2016" Week="6"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="6"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2015-2016" Week="6"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="6"></row>
+<row Dad="Eagles" Kyle="Giants" Season="2015-2016" Week="6"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="7"></row>
+<row Dad="Indianapolis" Kyle="Indianapolis Colts" Season="2015-2016" Week="7"></row>
+<row Dad="Minnesota" Kyle="Minnesota Vikings" Season="2015-2016" Week="7"></row>
+<row Dad="Kansas" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="7"></row>
+<row Dad="Miami" Kyle="Miami Dolphins" Season="2015-2016" Week="7"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="7"></row>
+<row Dad="Atlanta" Kyle="Atlanta Falcons" Season="2015-2016" Week="7"></row>
+<row Dad="St Louis" Kyle="Cleveland Browns" Season="2015-2016" Week="7"></row>
+<row Dad="Washington" Kyle="Washington Redskins" Season="2015-2016" Week="7"></row>
+<row Dad="San Diego" Kyle="Oakland Raiders" Season="2015-2016" Week="7"></row>
+<row Dad="New York Giants" Kyle="New York Giants" Season="2015-2016" Week="7"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="7"></row>
+<row Dad="Buffalo" Kyle="Buffalo Bills" Season="2015-2016" Week="7"></row>
+<row Dad="Arizona" Kyle="Arizona Cardinals" Season="2015-2016" Week="7"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="8"></row>
+<row Dad="Atlanta" Kyle="Atlanta Falcons" Season="2015-2016" Week="8"></row>
+<row Dad="Minnesota" Kyle="Minnesota Vikings" Season="2015-2016" Week="8"></row>
+<row Dad="Arizona" Kyle="Arizona Cardinals" Season="2015-2016" Week="8"></row>
+<row Dad="Houston" Kyle="Houston Texans" Season="2015-2016" Week="8"></row>
+<row Dad="New Orleans" Kyle="New York Giants" Season="2015-2016" Week="8"></row>
+<row Dad="Cincinnati" Kyle="Cincinnati Bengals" Season="2015-2016" Week="8"></row>
+<row Dad="St. Louis" Kyle="St. Louis Rams" Season="2015-2016" Week="8"></row>
+<row Dad="Baltimore" Kyle="Baltimore Ravens" Season="2015-2016" Week="8"></row>
+<row Dad="New York Jets" Kyle="New York Jets" Season="2015-2016" Week="8"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="8"></row>
+<row Dad="Green Bay" Kyle="Green Bay Packers" Season="2015-2016" Week="8"></row>
+<row Dad="Kansas" Kyle="Kansas City Chiefs" Season="2015-2016" Week="8"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="8"></row>
+<row Dad="Bengals" Kyle="Cincinnati Bengals" Season="2015-2016" Week="9"></row>
+<row Dad="Miami" Kyle="Buffalo Bills" Season="2015-2016" Week="9"></row>
+<row Dad="Green Bay" Kyle="Green Bay Packers" Season="2015-2016" Week="9"></row>
+<row Dad="Vikings" Kyle="Minnesota Vikings" Season="2015-2016" Week="9"></row>
+<row Dad="New Orleans" Kyle="New Orleans Saints" Season="2015-2016" Week="9"></row>
+<row Dad="Patriots" Kyle="New England Patriots" Season="2015-2016" Week="9"></row>
+<row Dad="Jets" Kyle="New York Jets" Season="2015-2016" Week="9"></row>
+<row Dad="Steelers" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="9"></row>
+<row Dad="Atlanta" Kyle="Atlanta Falcons" Season="2015-2016" Week="9"></row>
+<row Dad="New York Giants" Kyle="New York Giants" Season="2015-2016" Week="9"></row>
+<row Dad="Denver" Kyle="Denver Broncos" Season="2015-2016" Week="9"></row>
+<row Dad="Philadelphia" Kyle="Philadelphia Eagles" Season="2015-2016" Week="9"></row>
+<row Dad="San Diego" Kyle="San Diego Chargers" Season="2015-2016" Week="9"></row>
+<row Dad="New York Jets" Kyle="Jets" Season="2015-2016" Week="10"></row>
+<row Dad="Green Bay" Kyle="Green Bay Packers" Season="2015-2016" Week="10"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="10"></row>
+<row Dad="Philadelphia" Kyle="Philadelphia Eagles" Season="2015-2016" Week="10"></row>
+<row Dad="Pittsburgh" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="10"></row>
+<row Dad="St. Louis" Kyle="St. Louis Rams" Season="2015-2016" Week="10"></row>
+<row Dad="Baltimore" Kyle="Baltimore Ravens" Season="2015-2016" Week="10"></row>
+<row Dad="Dallas" Kyle="Dallas Cowboys" Season="2015-2016" Week="10"></row>
+<row Dad="New Orleans" Kyle="New Orleans Saints" Season="2015-2016" Week="10"></row>
+<row Dad="Oakland" Kyle="Oakland Raiders" Season="2015-2016" Week="10"></row>
+<row Dad="Denver" Kyle="Denver Broncos" Season="2015-2016" Week="10"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="10"></row>
+<row Dad="Seattle" Kyle="Arizona Cardinals" Season="2015-2016" Week="10"></row>
+<row Dad="Cincinnati" Kyle="Cincinnati Bengals" Season="2015-2016" Week="10"></row>
+<row Dad="Titans" Kyle="Jaguars" Season="2015-2016" Week="11"></row>
+<row Dad="Atlanta" Kyle="Atlanta Falcons" Season="2015-2016" Week="11"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="11"></row>
+<row Dad="Chicago" Kyle="Denver Broncos" Season="2015-2016" Week="11"></row>
+<row Dad="Oakland" Kyle="Oakland Raiders" Season="2015-2016" Week="11"></row>
+<row Dad="New York" Kyle="New York Jets" Season="2015-2016" Week="11"></row>
+<row Dad="Miami" Kyle="Miami Dolphins" Season="2015-2016" Week="11"></row>
+<row Dad="Green Bay" Kyle="Minnesota Vikings" Season="2015-2016" Week="11"></row>
+<row Dad="Philadelphia" Kyle="Philadelphia Eagles" Season="2015-2016" Week="11"></row>
+<row Dad="Baltimore" Kyle="St. Louis Rams" Season="2015-2016" Week="11"></row>
+<row Dad="Arizona" Kyle="Arizona Cardinals" Season="2015-2016" Week="11"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="11"></row>
+<row Dad="San Diego" Kyle="Kansas City Chiefs" Season="2015-2016" Week="11"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="11"></row>
+<row Dad="Lions" Kyle="Eagles" Season="2015-2016" Week="12"></row>
+<row Dad="Cowboys" Kyle="Panthers" Season="2015-2016" Week="12"></row>
+<row Dad="Packers" Kyle="Packers" Season="2015-2016" Week="12"></row>
+<row Dad="Atlanta" Kyle="Minnesota Vikings" Season="2015-2016" Week="12"></row>
+<row Dad="Cincinnati" Kyle="Cincinnati Bengals" Season="2015-2016" Week="12"></row>
+<row Dad="Tampa Bay" Kyle="Tampa Bay Buccaneers" Season="2015-2016" Week="12"></row>
+<row Dad="Saints" Kyle="Houston Texans" Season="2015-2016" Week="12"></row>
+<row Dad="San Diego" Kyle="Jacksonville Jaguars" Season="2015-2016" Week="12"></row>
+<row Dad="Bills" Kyle="Kansas City Chiefs" Season="2015-2016" Week="12"></row>
+<row Dad="Jets" Kyle="New York Jets" Season="2015-2016" Week="12"></row>
+<row Dad="Titans" Kyle="Oakland Raiders" Season="2015-2016" Week="12"></row>
+<row Dad="Giants" Kyle="New York Giants" Season="2015-2016" Week="12"></row>
+<row Dad="Arizona" Kyle="Arizona Cardinals" Season="2015-2016" Week="12"></row>
+<row Dad="Seattle" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="12"></row>
+<row Dad="Patriots" Kyle="New England Patriots" Season="2015-2016" Week="12"></row>
+<row Dad="Browns" Kyle="Baltimore Ravens" Season="2015-2016" Week="12"></row>
+<row Dad="Green Bay" Kyle="Detroit Lions" Season="2015-2016" Week="13"></row>
+<row Dad="Buffalo" Kyle="Buffalo Bills" Season="2015-2016" Week="13"></row>
+<row Dad="Chicago" Kyle="Chicago Bears" Season="2015-2016" Week="13"></row>
+<row Dad="Cincinnati" Kyle="Cincinnati Bengals" Season="2015-2016" Week="13"></row>
+<row Dad="Baltimore" Kyle="Baltimore Ravens" Season="2015-2016" Week="13"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="13"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="13"></row>
+<row Dad="New York Giants" Kyle="New York Giants" Season="2015-2016" Week="13"></row>
+<row Dad="Jacksonville" Kyle="Jacksonville Jaguars" Season="2015-2016" Week="13"></row>
+<row Dad="St.Louis" Kyle="Arizona Cardinals" Season="2015-2016" Week="13"></row>
+<row Dad="Tampa" Kyle="Tampa Bay Buccaneers" Season="2015-2016" Week="13"></row>
+<row Dad="Kansas" Kyle="Kansas City Chiefs" Season="2015-2016" Week="13"></row>
+<row Dad="San Diego" Kyle="Denver Broncos" Season="2015-2016" Week="13"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="13"></row>
+<row Dad="Pittsburgh" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="13"></row>
+<row Dad="Washington" Kyle="Washington Redskins" Season="2015-2016" Week="13"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2015-2016" Week="14"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="14"></row>
+<row Dad="Chicago" Kyle="Chicago Bears" Season="2015-2016" Week="14"></row>
+<row Dad="Pittsburgh" Kyle="Cincinnati Bengals" Season="2015-2016" Week="14"></row>
+<row Dad="Cleveland" Kyle="San Francisco 49ers" Season="2015-2016" Week="14"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="14"></row>
+<row Dad="Jacksonville" Kyle="Indianapolis Colts" Season="2015-2016" Week="14"></row>
+<row Dad="Kansas" Kyle="Kansas City Chiefs" Season="2015-2016" Week="14"></row>
+<row Dad="New York Jets" Kyle="New York Jets" Season="2015-2016" Week="14"></row>
+<row Dad="Philadelphia" Kyle="Bills" Season="2015-2016" Week="14"></row>
+<row Dad="Detroit" Kyle="Detroit Lions" Season="2015-2016" Week="14"></row>
+<row Dad="Tampa Bay" Kyle="Buccaneers" Season="2015-2016" Week="14"></row>
+<row Dad="Denver" Kyle="Denver Broncos" Season="2015-2016" Week="14"></row>
+<row Dad="Green Bay" Kyle="Green Bay Packers" Season="2015-2016" Week="14"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="14"></row>
+<row Dad="New York Giants" Kyle="New York Giants" Season="2015-2016" Week="14"></row>
+<row Dad="St. Louis" Kyle="Buccaneers" Season="2015-2016" Week="15"></row>
+<row Dad="New York Jets" Kyle="Jets" Season="2015-2016" Week="15"></row>
+<row Dad="Houston" Kyle="Texans" Season="2015-2016" Week="15"></row>
+<row Dad="Jacksonville" Kyle="Jaguars" Season="2015-2016" Week="15"></row>
+<row Dad="Minnesota" Kyle="Vikings" Season="2015-2016" Week="15"></row>
+<row Dad="New England" Kyle="Patriots" Season="2015-2016" Week="15"></row>
+<row Dad="New York Giants" Kyle="Panthers" Season="2015-2016" Week="15"></row>
+<row Dad="Arizona" Kyle="Cardinals" Season="2015-2016" Week="15"></row>
+<row Dad="Kansas" Kyle="Chiefs" Season="2015-2016" Week="15"></row>
+<row Dad="Buffalo" Kyle="Bills" Season="2015-2016" Week="15"></row>
+<row Dad="Green Bay" Kyle="Packers" Season="2015-2016" Week="15"></row>
+<row Dad="Seattle" Kyle="Seahawks" Season="2015-2016" Week="15"></row>
+<row Dad="Pittsburgh" Kyle="Steelers" Season="2015-2016" Week="15"></row>
+<row Dad="San Diego" Kyle="Dolphins" Season="2015-2016" Week="15"></row>
+<row Dad="Cincinnati" Kyle="Bengals" Season="2015-2016" Week="15"></row>
+<row Dad="New Orleans" Kyle="Saints" Season="2015-2016" Week="15"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2015-2016" Week="16"></row>
+<row Dad="Eagles" Kyle="Redskins" Season="2015-2016" Week="16"></row>
+<row Dad="Carolina" Kyle="Carolina Panthers" Season="2015-2016" Week="16"></row>
+<row Dad="Buffalo" Kyle="Buffalo Bills" Season="2015-2016" Week="16"></row>
+<row Dad="Detroit" Kyle="Detroit Lions" Season="2015-2016" Week="16"></row>
+<row Dad="Kansas" Kyle="Kansas City Chiefs" Season="2015-2016" Week="16"></row>
+<row Dad="Miami" Kyle="Colts" Season="2015-2016" Week="16"></row>
+<row Dad="Minnesota" Kyle="Minnesota Vikings" Season="2015-2016" Week="16"></row>
+<row Dad="New Orleans" Kyle="Jacksonville Jaguars" Season="2015-2016" Week="16"></row>
+<row Dad="New England" Kyle="New England Patriots" Season="2015-2016" Week="16"></row>
+<row Dad="Houston" Kyle="Houston Texans" Season="2015-2016" Week="16"></row>
+<row Dad="Tampa Bay" Kyle="Tampa Bay Buccaneers" Season="2015-2016" Week="16"></row>
+<row Dad="Arizona" Kyle="Arizona Cardinals" Season="2015-2016" Week="16"></row>
+<row Dad="Seattle" Kyle="Seattle Seahawks" Season="2015-2016" Week="16"></row>
+<row Dad="Pittsburgh" Kyle="Pittsburgh Steelers" Season="2015-2016" Week="16"></row>
+<row Dad="Denver" Kyle="Denver Broncos" Season="2015-2016" Week="16"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2015-2016" Week="17"></row>
+<row Dad="Jets" Kyle="Jets" Season="2015-2016" Week="17"></row>
+<row Dad="Carolina" Kyle="Panthers" Season="2015-2016" Week="17"></row>
+<row Dad="Bears" Kyle="Bears" Season="2015-2016" Week="17"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2015-2016" Week="17"></row>
+<row Dad="Pittsburgh" Kyle="Steelers" Season="2015-2016" Week="17"></row>
+<row Dad="Colts" Kyle="Colts" Season="2015-2016" Week="17"></row>
+<row Dad="Washington" Kyle="Redskins" Season="2015-2016" Week="17"></row>
+<row Dad="Green Bay" Kyle="Vikings" Season="2015-2016" Week="17"></row>
+<row Dad="Houston" Kyle="Texans" Season="2015-2016" Week="17"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2015-2016" Week="17"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2015-2016" Week="17"></row>
+<row Dad="Giants" Kyle="Giants" Season="2015-2016" Week="17"></row>
+<row Dad="Arizona" Kyle="Cardinals" Season="2015-2016" Week="17"></row>
+<row Dad="Denver" Kyle="Broncos" Season="2015-2016" Week="17"></row>
+<row Dad="Rams" Kyle="Rams" Season="2015-2016" Week="17"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="1"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="1"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="1"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2016-2017" Week="1"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="1"></row>
+<row Dad="Titans" Kyle="Titans" Season="2016-2017" Week="1"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="1"></row>
+<row Dad="Eagles" Kyle="Browns" Season="2016-2017" Week="1"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="1"></row>
+<row Dad="Ravens" Kyle="Bills" Season="2016-2017" Week="1"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="1"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="1"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="1"></row>
+<row Dad="Saints" Kyle="Saints" Season="2016-2017" Week="1"></row>
+<row Dad="Rams" Kyle="Rams" Season="2016-2017" Week="1"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="1"></row>
+<row Dad="Bills" Kyle="Jets" Season="2016-2017" Week="2"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="2"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="2"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="2"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="2"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="2"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="2"></row>
+<row Dad="Chiefs" Kyle="Texans" Season="2016-2017" Week="2"></row>
+<row Dad="Redskins" Kyle="Cowboys" Season="2016-2017" Week="2"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="2"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="2"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="2"></row>
+<row Dad="Chargers" Kyle="Jaguars" Season="2016-2017" Week="2"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="2"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="2"></row>
+<row Dad="Bears" Kyle="Eagles" Season="2016-2017" Week="2"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="3"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="3"></row>
+<row Dad="Broncos" Kyle="Bengals" Season="2016-2017" Week="3"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="3"></row>
+<row Dad="Packers" Kyle="Lions" Season="2016-2017" Week="3"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="3"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2016-2017" Week="3"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="3"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="3"></row>
+<row Dad="Buccaneers" Kyle="Rams" Season="2016-2017" Week="3"></row>
+<row Dad="Seahawks" Kyle="49ers" Season="2016-2017" Week="3"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="3"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="3"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="3"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="3"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="3"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2016-2017" Week="4"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="4"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="4"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="4"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="4"></row>
+<row Dad="Jets" Kyle="Seahawks" Season="2016-2017" Week="4"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="4"></row>
+<row Dad="Falcons" Kyle="Panthers" Season="2016-2017" Week="4"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2016-2017" Week="4"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2016-2017" Week="4"></row>
+<row Dad="49ers" Kyle="Cowboys" Season="2016-2017" Week="4"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2016-2017" Week="4"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="4"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="4"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="4"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="5"></row>
+<row Dad="Lions" Kyle="Eagles" Season="2016-2017" Week="5"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="5"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="5"></row>
+<row Dad="VIkings" Kyle="Vikings" Season="2016-2017" Week="5"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="5"></row>
+<row Dad="Miami" Kyle="Titans" Season="2016-2017" Week="5"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="5"></row>
+<row Dad="Denver" Kyle="Broncos" Season="2016-2017" Week="5"></row>
+<row Dad="Rams" Kyle="Bills" Season="2016-2017" Week="5"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="5"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="5"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="5"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="5"></row>
+<row Dad="Chargers" Kyle="Broncos" Season="2016-2017" Week="6"></row>
+<row Dad="Panthers" Kyle="Saints" Season="2016-2017" Week="6"></row>
+<row Dad="Bears" Kyle="Jaguars" Season="2016-2017" Week="6"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="6"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="6"></row>
+<row Dad="Bills" Kyle="Bills" Season="2016-2017" Week="6"></row>
+<row Dad="Browns" Kyle="Titans" Season="2016-2017" Week="6"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="6"></row>
+<row Dad="Redskins" Kyle="Eagles" Season="2016-2017" Week="6"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="6"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="6"></row>
+<row Dad="Seattle" Kyle="Seahawks" Season="2016-2017" Week="6"></row>
+<row Dad="Packers" Kyle="Cowboys" Season="2016-2017" Week="6"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="6"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="6"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="7"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="7"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="7"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2016-2017" Week="7"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="7"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="7"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="7"></row>
+<row Dad="Miami" Kyle="Bills" Season="2016-2017" Week="7"></row>
+<row Dad="Lions" Kyle="Redskins" Season="2016-2017" Week="7"></row>
+<row Dad="Jaguars" Kyle="Raiders" Season="2016-2017" Week="7"></row>
+<row Dad="49ers" Kyle="49ers" Season="2016-2017" Week="7"></row>
+<row Dad="Atlanta" Kyle="Falcons" Season="2016-2017" Week="7"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="7"></row>
+<row Dad="Arizona" Kyle="Seahawks" Season="2016-2017" Week="7"></row>
+<row Dad="Denver" Kyle="Broncos" Season="2016-2017" Week="7"></row>
+<row Dad="Titans" Kyle="Jaguars" Season="2016-2017" Week="8"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2016-2017" Week="8"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="8"></row>
+<row Dad="Jets" Kyle="Jets" Season="2016-2017" Week="8"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="8"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="8"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="8"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="8"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="8"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2016-2017" Week="8"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="8"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="8"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="8"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="9"></row>
+<row Dad="Ravens" Kyle="Steelers" Season="2016-2017" Week="9"></row>
+<row Dad="Vikings" Kyle="Lions" Season="2016-2017" Week="9"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="9"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="9"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2016-2017" Week="9"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="9"></row>
+<row Dad="Saints" Kyle="Saints" Season="2016-2017" Week="9"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="9"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2016-2017" Week="9"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="9"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2016-2017" Week="9"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="9"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="10"></row>
+<row Dad="Eagles" Kyle="Falcons" Season="2016-2017" Week="10"></row>
+<row Dad="Jets" Kyle="Jets" Season="2016-2017" Week="10"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="10"></row>
+<row Dad="Saints" Kyle="Saints" Season="2016-2017" Week="10"></row>
+<row Dad="Panthers" Kyle="Chiefs" Season="2016-2017" Week="10"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="10"></row>
+<row Dad="Redskins" Kyle="Vikings" Season="2016-2017" Week="10"></row>
+<row Dad="Buccaneers" Kyle="Buccaneers " Season="2016-2017" Week="10"></row>
+<row Dad="Chargers" Kyle="Dolphins" Season="2016-2017" Week="10"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="10"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="10"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="10"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="10"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="11"></row>
+<row Dad="Bengals" Kyle="Bills" Season="2016-2017" Week="11"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="11"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="11"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="11"></row>
+<row Dad="Cheifs" Kyle="Chiefs" Season="2016-2017" Week="11"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="11"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="11"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="11"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2016-2017" Week="11"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="11"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="11"></row>
+<row Dad="Redskins" Kyle="Packers" Season="2016-2017" Week="11"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="11"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="12"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="12"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="12"></row>
+<row Dad="Chargers" Kyle="Texans" Season="2016-2017" Week="12"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="12"></row>
+<row Dad="Bills" Kyle="Bills" Season="2016-2017" Week="12"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="12"></row>
+<row Dad="Saints" Kyle="Saints" Season="2016-2017" Week="12"></row>
+<row Dad="Bears" Kyle="Titans" Season="2016-2017" Week="12"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2016-2017" Week="12"></row>
+<row Dad="Atlanta" Kyle="Atlanta" Season="2016-2017" Week="12"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="12"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2016-2017" Week="12"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="12"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="12"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2016-2017" Week="12"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="13"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2016-2017" Week="13"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="13"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="13"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="13"></row>
+<row Dad="Saints" Kyle="Saints" Season="2016-2017" Week="13"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="13"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2016-2017" Week="13"></row>
+<row Dad="49ers" Kyle="Bears" Season="2016-2017" Week="13"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="13"></row>
+<row Dad="Chargers" Kyle="Buccaneers" Season="2016-2017" Week="13"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2016-2017" Week="13"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="13"></row>
+<row Dad="Seattle" Kyle="Seattle" Season="2016-2017" Week="13"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="13"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="14"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="14"></row>
+<row Dad="Saints" Kyle="Buccaneers" Season="2016-2017" Week="14"></row>
+<row Dad="Lions" Kyle="Lions" Season="2016-2017" Week="14"></row>
+<row Dad="Titans" Kyle="Broncos" Season="2016-2017" Week="14"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2016-2017" Week="14"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="14"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="14"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2016-2017" Week="14"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="14"></row>
+<row Dad="Eagles" Kyle="Redskins" Season="2016-2017" Week="14"></row>
+<row Dad="Jets" Kyle="Jets" Season="2016-2017" Week="14"></row>
+<row Dad="Packers" Kyle="Seahawks" Season="2016-2017" Week="14"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="14"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="14"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="14"></row>
+<row Dad="Seattle" Kyle="Seattle" Season="2016-2017" Week="15"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2016-2017" Week="15"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="15"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="15"></row>
+<row Dad="Giants" Kyle="Giants" Season="2016-2017" Week="15"></row>
+<row Dad="Bills" Kyle="Bills" Season="2016-2017" Week="15"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="15"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="15"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="15"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="15"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="15"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="15"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="15"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="15"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="15"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2016-2017" Week="15"></row>
+<row Dad="Eagles" Kyle="Giants" Season="2016-2017" Week="16"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2016-2017" Week="16"></row>
+<row Dad="Bills" Kyle="Dolphins" Season="2016-2017" Week="16"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2016-2017" Week="16"></row>
+<row Dad="Titans" Kyle="Titans" Season="2016-2017" Week="16"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="16"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="16"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="16"></row>
+<row Dad="Saints" Kyle="Buccaneers" Season="2016-2017" Week="16"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2016-2017" Week="16"></row>
+<row Dad="Rams" Kyle="Rams" Season="2016-2017" Week="16"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="16"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="16"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="16"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="16"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="16"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2016-2017" Week="17"></row>
+<row Dad="Redskins" Kyle="Giants" Season="2016-2017" Week="17"></row>
+<row Dad="Texans" Kyle="Texans" Season="2016-2017" Week="17"></row>
+<row Dad="Colts" Kyle="Colts" Season="2016-2017" Week="17"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2016-2017" Week="17"></row>
+<row Dad="Jets" Kyle="Bills" Season="2016-2017" Week="17"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2016-2017" Week="17"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2016-2017" Week="17"></row>
+<row Dad="Panthers" Kyle="Buccaneers" Season="2016-2017" Week="17"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2016-2017" Week="17"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2016-2017" Week="17"></row>
+<row Dad="Packers" Kyle="Packers" Season="2016-2017" Week="17"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2016-2017" Week="17"></row>
+<row Dad="Broncos" Kyle="Raiders" Season="2016-2017" Week="17"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2016-2017" Week="17"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2016-2017" Week="17"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="1"></row>
+<row Dad="Oakland" Kyle="Oakland" Season="2017-2018" Week="1"></row>
+<row Dad="Baltimore" Kyle="Baltimore" Season="2017-2018" Week="1"></row>
+<row Dad="Eagles" Kyle="Redskins" Season="2017-2018" Week="1"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="1"></row>
+<row Dad="Houston" Kyle="Houston" Season="2017-2018" Week="1"></row>
+<row Dad="Atlanta" Kyle="Atlanta" Season="2017-2018" Week="1"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="1"></row>
+<row Dad="Detroit" Kyle="Arizona" Season="2017-2018" Week="1"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="1"></row>
+<row Dad="Green Bay" Kyle="Green Bay" Season="2017-2018" Week="1"></row>
+<row Dad="Carolina" Kyle="Carolina" Season="2017-2018" Week="1"></row>
+<row Dad="Giants" Kyle="Giants" Season="2017-2018" Week="1"></row>
+<row Dad="Vikings" Kyle="Saints" Season="2017-2018" Week="1"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="1"></row>
+<row Dad="Bengals" Kyle="Texans" Season="2017-2018" Week="2"></row>
+<row Dad="Bills" Kyle="Panthers" Season="2017-2018" Week="2"></row>
+<row Dad="Bears" Kyle="Buccaneers" Season="2017-2018" Week="2"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="2"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2017-2018" Week="2"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="2"></row>
+<row Dad="Browns" Kyle="Ravens" Season="2017-2018" Week="2"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="2"></row>
+<row Dad="Jaguars" Kyle="Titans" Season="2017-2018" Week="2"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="2"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2017-2018" Week="2"></row>
+<row Dad="Broncos" Kyle="Cowboys" Season="2017-2018" Week="2"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="2"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="2"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="2"></row>
+<row Dad="Giants" Kyle="Lions" Season="2017-2018" Week="2"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="3"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="3"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="3"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="3"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2017-2018" Week="3"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="3"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="3"></row>
+<row Dad="Vikings" Kyle="Tampa" Season="2017-2018" Week="3"></row>
+<row Dad="Browns" Kyle="Colts" Season="2017-2018" Week="3"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="3"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="3"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="3"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="3"></row>
+<row Dad="Packers" Kyle="Packers" Season="2017-2018" Week="3"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="3"></row>
+<row Dad="Cardinals" Kyle="Cowboys" Season="2017-2018" Week="3"></row>
+<row Dad="Packers" Kyle="Packers" Season="2017-2018" Week="4"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="4"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="4"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="4"></row>
+<row Dad="Browns" Kyle="Bengals" Season="2017-2018" Week="4"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2017-2018" Week="4"></row>
+<row Dad="Texans" Kyle="Titans" Season="2017-2018" Week="4"></row>
+<row Dad="Vikings" Kyle="Lions" Season="2017-2018" Week="4"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="4"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="4"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2017-2018" Week="4"></row>
+<row Dad="Chargers" Kyle="Eagles" Season="2017-2018" Week="4"></row>
+<row Dad="Tampa" Kyle="Tampa" Season="2017-2018" Week="4"></row>
+<row Dad="Denver" Kyle="Denver" Season="2017-2018" Week="4"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="4"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="4"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="5"></row>
+<row Dad="Browns" Kyle="Jets" Season="2017-2018" Week="5"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="5"></row>
+<row Dad="Colts" Kyle="Colts" Season="2017-2018" Week="5"></row>
+<row Dad="Miami" Kyle="Titans" Season="2017-2018" Week="5"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="5"></row>
+<row Dad="Giants" Kyle="Giants" Season="2017-2018" Week="5"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="5"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="5"></row>
+<row Dad="Seattle" Kyle="Seahawks" Season="2017-2018" Week="5"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="5"></row>
+<row Dad="Packers" Kyle="Packers" Season="2017-2018" Week="5"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="5"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="5"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="6"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="6"></row>
+<row Dad="Texans" Kyle="Texans" Season="2017-2018" Week="6"></row>
+<row Dad="Packers" Kyle="Packers" Season="2017-2018" Week="6"></row>
+<row Dad="Saints" Kyle="Lions" Season="2017-2018" Week="6"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="6"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="6"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2017-2018" Week="6"></row>
+<row Dad="Tampa" Kyle="Tampa" Season="2017-2018" Week="6"></row>
+<row Dad="Rams" Kyle="Jaguars" Season="2017-2018" Week="6"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="6"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="6"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="6"></row>
+<row Dad="Titans" Kyle="Titans" Season="2017-2018" Week="6"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="7"></row>
+<row Dad="Bills" Kyle="Tampa" Season="2017-2018" Week="7"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="7"></row>
+<row Dad="Titans" Kyle="Titans" Season="2017-2018" Week="7"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="7"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="7"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="7"></row>
+<row Dad="Dolphins" Kyle="Dolphins" Season="2017-2018" Week="7"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="7"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2017-2018" Week="7"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="7"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="7"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="7"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="7"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="7"></row>
+<row Dad="Ravens" Kyle="Dolphins" Season="2017-2018" Week="8"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="8"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="8"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="8"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="8"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2017-2018" Week="8"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="8"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="8"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="8"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="8"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2017-2018" Week="8"></row>
+<row Dad="Lions" Kyle="Steelers" Season="2017-2018" Week="8"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="8"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="9"></row>
+<row Dad="Texans" Kyle="Texans" Season="2017-2018" Week="9"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="9"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="9"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="9"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="9"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="9"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="9"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="9"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2017-2018" Week="9"></row>
+<row Dad="Cowboys" Kyle="Chiefs" Season="2017-2018" Week="9"></row>
+<row Dad="Dolphins" Kyle="Raiders" Season="2017-2018" Week="9"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="9"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="10"></row>
+<row Dad="Buffalo" Kyle="Saints" Season="2017-2018" Week="10"></row>
+<row Dad="Chicago" Kyle="Packers" Season="2017-2018" Week="10"></row>
+<row Dad="Detroit" Kyle="Lions" Season="2017-2018" Week="10"></row>
+<row Dad="Titans" Kyle="Titans" Season="2017-2018" Week="10"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="10"></row>
+<row Dad="Tampa Bay" Kyle="Jets" Season="2017-2018" Week="10"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="10"></row>
+<row Dad="Jacksonville" Kyle="Jaguars" Season="2017-2018" Week="10"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="10"></row>
+<row Dad="Atlanta" Kyle="Cowboys" Season="2017-2018" Week="10"></row>
+<row Dad="Giants" Kyle="Giants" Season="2017-2018" Week="10"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="10"></row>
+<row Dad="Carolina" Kyle="Panthers" Season="2017-2018" Week="10"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="11"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="11"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="11"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="11"></row>
+<row Dad="Vikings" Kyle="Rams" Season="2017-2018" Week="11"></row>
+<row Dad="Texans" Kyle="Cardinals" Season="2017-2018" Week="11"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="11"></row>
+<row Dad="Buccaneers" Kyle="Buccaneers" Season="2017-2018" Week="11"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="11"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="11"></row>
+<row Dad="Broncos" Kyle="Bengals" Season="2017-2018" Week="11"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="11"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="11"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="11"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="12"></row>
+<row Dad="Dallas" Kyle="Dallas" Season="2017-2018" Week="12"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2017-2018" Week="12"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="12"></row>
+<row Dad="Bengals" Kyle="Bengals" Season="2017-2018" Week="12"></row>
+<row Dad="Titans" Kyle="Titans" Season="2017-2018" Week="12"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="12"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="12"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="12"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="12"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="12"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="12"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="12"></row>
+<row Dad="Cardinals" Kyle="Jaguars" Season="2017-2018" Week="12"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="12"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="12"></row>
+<row Dad="Cowboys" Kyle="Redskins" Season="2017-2018" Week="13"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="13"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="13"></row>
+<row Dad="Titans" Kyle="Titans" Season="2017-2018" Week="13"></row>
+<row Dad="Lions" Kyle="Ravens" Season="2017-2018" Week="13"></row>
+<row Dad="Falcons" Kyle="Vikings" Season="2017-2018" Week="13"></row>
+<row Dad="49ers" Kyle="49ers" Season="2017-2018" Week="13"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="13"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="13"></row>
+<row Dad="Green Bay" Kyle="Tampa" Season="2017-2018" Week="13"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2017-2018" Week="13"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="13"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="13"></row>
+<row Dad="Raiders" Kyle="Raiders" Season="2017-2018" Week="13"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="13"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="13"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="14"></row>
+<row Dad="Packers" Kyle="Packers" Season="2017-2018" Week="14"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="14"></row>
+<row Dad="Chiefs" Kyle="Raiders" Season="2017-2018" Week="14"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2017-2018" Week="14"></row>
+<row Dad="Bears" Kyle="Bengals" Season="2017-2018" Week="14"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="14"></row>
+<row Dad="49ers" Kyle="49ers" Season="2017-2018" Week="14"></row>
+<row Dad="Panthers" Kyle="Vikings" Season="2017-2018" Week="14"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2017-2018" Week="14"></row>
+<row Dad="Cardinals" Kyle="Titans" Season="2017-2018" Week="14"></row>
+<row Dad="Broncos" Kyle="Jets" Season="2017-2018" Week="14"></row>
+<row Dad="Seahawks" Kyle="Seahawks" Season="2017-2018" Week="14"></row>
+<row Dad="Eagles" Kyle="Rams" Season="2017-2018" Week="14"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="14"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="14"></row>
+<row Dad="Broncos" Kyle="Broncos" Season="2017-2018" Week="15"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="15"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2017-2018" Week="15"></row>
+<row Dad="Bills" Kyle="Bills" Season="2017-2018" Week="15"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="15"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="15"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="15"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="15"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2017-2018" Week="15"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="15"></row>
+<row Dad="Jaguars" Kyle="Jaguars" Season="2017-2018" Week="15"></row>
+<row Dad="Seahawks" Kyle="Rams" Season="2017-2018" Week="15"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="15"></row>
+<row Dad="49ers" Kyle="49ers" Season="2017-2018" Week="15"></row>
+<row Dad="Cowboys" Kyle="Cowboys" Season="2017-2018" Week="15"></row>
+<row Dad="Falcons" Kyle="Falcons" Season="2017-2018" Week="15"></row>
+<row Dad="Ravens" Kyle="Ravens" Season="2017-2018" Week="16"></row>
+<row Dad="Vikings" Kyle="Vikings" Season="2017-2018" Week="16"></row>
+<row Dad="Rams" Kyle="Rams" Season="2017-2018" Week="16"></row>
+<row Dad="Patriots" Kyle="Patriots" Season="2017-2018" Week="16"></row>
+<row Dad="Bears" Kyle="Bears" Season="2017-2018" Week="16"></row>
+<row Dad="Saints" Kyle="Saints" Season="2017-2018" Week="16"></row>
+<row Dad="Lions" Kyle="Lions" Season="2017-2018" Week="16"></row>
+<row Dad="Panthers" Kyle="Panthers" Season="2017-2018" Week="16"></row>
+<row Dad="Chiefs" Kyle="Chiefs" Season="2017-2018" Week="16"></row>
+<row Dad="Redskins" Kyle="Redskins" Season="2017-2018" Week="16"></row>
+<row Dad="Chargers" Kyle="Chargers" Season="2017-2018" Week="16"></row>
+<row Dad="49ers" Kyle="Jaguars" Season="2017-2018" Week="16"></row>
+<row Dad="Seattle" Kyle="Cowboys" Season="2017-2018" Week="16"></row>
+<row Dad="Cardinals" Kyle="Cardinals" Season="2017-2018" Week="16"></row>
+<row Dad="Steelers" Kyle="Steelers" Season="2017-2018" Week="16"></row>
+<row Dad="Eagles" Kyle="Eagles" Season="2017-2018" Week="16"></row>
+</root>
