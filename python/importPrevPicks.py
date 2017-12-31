@@ -80,9 +80,11 @@ obj = untangle.parse('picks.xml')
 kyleUID = 'H3EI5DDrbldJEg2FxEk6N9oYnaf2'
 dadUID = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
 
-UIDs = [dadUID, kyleUID]
-userNames = ['Dad', 'Kyle']
+UIDs = [kyleUID, dadUID]
+userNames = ['Kyle', 'Dad']
 usersNum = len(UIDs)
+
+max = len(obj.root)
 
 for user in range(0, usersNum):
     print 'user' + str(user)
@@ -92,7 +94,7 @@ for user in range(0, usersNum):
     weekIncorrectCount = 0
     seasonCorrect = 0
     seasonIncorrect = 0
-    for i in range(0, 753):
+    for i in range(0, max):
         if prevSeason != obj.root.row[i]['Season']:
             dbSeasonUserPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season']
             newSeason = root.child(dbSeasonUserPath).update({

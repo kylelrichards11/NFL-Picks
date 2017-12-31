@@ -46,7 +46,7 @@
                 <div *ngIf="gotData">
 
                   <!-- if the user has made any picks for this week yet -->
-                  <div *ngIf="userWeekPicks.games">
+                  <div *ngIf="userWeekPicks">
 
                     <!-- if the user has made a pick for this game yet -->
                     <div *ngIf="userWeekPicks.games[game.gameId]" class="row">
@@ -141,7 +141,7 @@
                   </div>
 
                   <!-- if the user has not made a pick for this week yet -->
-                  <div *ngIf="!userWeekPicks.games" class="row">
+                  <div *ngIf="!userWeekPicks" class="row">
                     <div class="col s5">
                       <!-- if the game has not yet started -->
                       <div *ngIf="!game.started">
