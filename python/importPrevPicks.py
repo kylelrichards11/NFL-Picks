@@ -138,22 +138,22 @@ for user in range(0, usersNum):
                     userPick = obj.root.row[k][userName]
                     if userPick == "St. Louis":
                         userPick = "Saint Louis"
+                    elif userPick == "Rams":
+                        if obj.root.row[i]['Season'] == '2015-2016':
+                            userPick = "Saint Louis Rams"
+                        else:
+                            userPick = "Los Angeles Rams"
+                    elif userPick == "Chargers":
+                        if obj.root.row[i]['Season'] == '2017-2018':
+                            userPick = "Los Angeles Chargers"
+                        else:
+                            userPick = "San Diego Chargers"
                     if userPick in homeBoth or userPick in awayBoth:
                         dbSetUserPickPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/games/' + gameId
                         if userPick == homeBoth or userPick == awayBoth:
                             newPick = root.child(dbSetUserPickPath).set({
                                 'pick' : userPick
                             })
-                        elif userPick == "Rams":
-                            if obj.root.row[i]['Season'] == '2015-2016':
-                                userPick = "Saint Louis Rams"
-                            else:
-                                userPick = "Los Angeles Rams"
-                        elif userPick == "Chargers":
-                            if obj.root.row[i]['Season'] == '2017-2018':
-                                userPick = "Los Angeles Chargers"
-                            else:
-                                userPick = "San Diego Chargers"
                         else:
                             userPick = teams[userPick]
                             newPick = root.child(dbSetUserPickPath).set({
