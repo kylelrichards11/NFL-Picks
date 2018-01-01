@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<root>
+<row Team="New England Patriots" City="New England" Name="Patriots" W="14" L="2" T="0" PCT="0.875" HOME="6-2" ROAD="8-0" DIV="5-1" CONF="11-1" PF="441" PA="250" DIFF="191" STRK="W7"></row>
+<row Team="Miami Dolphins" City="Miami" Name="Dolphins" W="10" L="6" T="0" PCT="0.625" HOME="6-2" ROAD="4-4" DIV="4-2" CONF="7-5" PF="363" PA="380" DIFF="-17" STRK="L1"></row>
+<row Team="Buffalo Bills" City="Buffalo" Name="Bills" W="7" L="9" T="0" PCT="0.438" HOME="4-4" ROAD="3-5" DIV="1-5" CONF="4-8" PF="399" PA="378" DIFF="21" STRK="L2"></row>
+<row Team="New York Jets" City="New York" Name="Jets" W="5" L="11" T="0" PCT="0.313" HOME="2-6" ROAD="3-5" DIV="2-4" CONF="4-8" PF="275" PA="409" DIFF="-134" STRK="W1"></row>
+<row Team="Pittsburgh Steelers" City="Pittsburgh" Name="Steelers" W="11" L="5" T="0" PCT="0.688" HOME="6-2" ROAD="5-3" DIV="5-1" CONF="9-3" PF="399" PA="327" DIFF="72" STRK="W7"></row>
+<row Team="Baltimore Ravens" City="Baltimore" Name="Ravens" W="8" L="8" T="0" PCT="0.5" HOME="6-2" ROAD="2-6" DIV="4-2" CONF="7-5" PF="343" PA="321" DIFF="22" STRK="L2"></row>
+<row Team="Cincinnati Bengals" City="Cincinnati" Name="Bengals" W="6" L="9" T="1" PCT="0.406" HOME="4-3-2001" ROAD="2-6" DIV="3-3" CONF="5-7" PF="325" PA="315" DIFF="10" STRK="W1"></row>
+<row Team="Cleveland Browns" City="Cleveland" Name="Browns" W="1" L="15" T="0" PCT="0.063" HOME="1-7" ROAD="0-8" DIV="0-6" CONF="1-11" PF="264" PA="452" DIFF="-188" STRK="L1"></row>
+<row Team="Houston Texans" City="Houston" Name="Texans" W="9" L="7" T="0" PCT="0.563" HOME="7-1" ROAD="2-6" DIV="5-1" CONF="7-5" PF="279" PA="328" DIFF="-49" STRK="L1"></row>
+<row Team="Tennessee Titans" City="Tennessee" Name="Titans" W="9" L="7" T="0" PCT="0.563" HOME="5-3" ROAD="4-4" DIV="2-4" CONF="6-6" PF="381" PA="378" DIFF="3" STRK="W1"></row>
+<row Team="Indianapolis Colts" City="Indianapolis" Name="Colts" W="8" L="8" T="0" PCT="0.5" HOME="4-4" ROAD="4-4" DIV="3-3" CONF="5-7" PF="411" PA="392" DIFF="19" STRK="W1"></row>
+<row Team="Jacksonville Jaguars" City="Jacksonville" Name="Jaguars" W="3" L="13" T="0" PCT="0.188" HOME="2-6" ROAD="1-7" DIV="2-4" CONF="2-10" PF="318" PA="400" DIFF="-82" STRK="L1"></row>
+<row Team="Kansas City Chiefs" City="Kansas City" Name="Chiefs" W="12" L="4" T="0" PCT="0.75" HOME="6-2" ROAD="6-2" DIV="6-0" CONF="9-3" PF="389" PA="311" DIFF="78" STRK="W2"></row>
+<row Team="Oakland Raiders" City="Oakland" Name="Raiders" W="12" L="4" T="0" PCT="0.75" HOME="6-2" ROAD="6-2" DIV="3-3" CONF="9-3" PF="416" PA="385" DIFF="31" STRK="L1"></row>
+<row Team="Denver Broncos" City="Denver" Name="Broncos" W="9" L="7" T="0" PCT="0.563" HOME="5-3" ROAD="4-4" DIV="2-4" CONF="6-6" PF="333" PA="297" DIFF="36" STRK="W1"></row>
+<row Team="San Diego Chargers" City="San Diego" Name="Chargers" W="5" L="11" T="0" PCT="0.313" HOME="3-5" ROAD="2-6" DIV="1-5" CONF="4-8" PF="410" PA="423" DIFF="-13" STRK="L5"></row>
+<row Team="Dallas Cowboys" City="Dallas" Name="Cowboys" W="13" L="3" T="0" PCT="0.813" HOME="7-1" ROAD="6-2" DIV="3-3" CONF="9-3" PF="421" PA="306" DIFF="115" STRK="L1"></row>
+<row Team="New York Giants" City="New York" Name="Giants" W="11" L="5" T="0" PCT="0.688" HOME="7-1" ROAD="4-4" DIV="4-2" CONF="8-4" PF="310" PA="284" DIFF="26" STRK="W1"></row>
+<row Team="Washington Redskins" City="Washington" Name="Redskins" W="8" L="7" T="1" PCT="0.531" HOME="4-4" ROAD="4-3-2001" DIV="3-3" CONF="6-6" PF="396" PA="383" DIFF="13" STRK="L1"></row>
+<row Team="Philadelphia Eagles" City="Philadelphia" Name="Eagles" W="7" L="9" T="0" PCT="0.438" HOME="6-2" ROAD="1-7" DIV="2-4" CONF="5-7" PF="367" PA="331" DIFF="36" STRK="W2"></row>
+<row Team="Green Bay Packers" City="Green Bay" Name="Packers" W="10" L="6" T="0" PCT="0.625" HOME="6-2" ROAD="4-4" DIV="5-1" CONF="8-4" PF="432" PA="388" DIFF="44" STRK="W6"></row>
+<row Team="Detroit Lions" City="Detroit" Name="Lions" W="9" L="7" T="0" PCT="0.563" HOME="6-2" ROAD="3-5" DIV="3-3" CONF="7-5" PF="346" PA="358" DIFF="-12" STRK="L3"></row>
+<row Team="Minnesota Vikings" City="Minnesota" Name="Vikings" W="8" L="8" T="0" PCT="0.5" HOME="5-3" ROAD="3-5" DIV="2-4" CONF="5-7" PF="327" PA="307" DIFF="20" STRK="W1"></row>
+<row Team="Chicago Bears" City="Chicago" Name="Bears" W="3" L="13" T="0" PCT="0.188" HOME="3-5" ROAD="0-8" DIV="2-4" CONF="3-9" PF="279" PA="399" DIFF="-120" STRK="L4"></row>
+<row Team="Atlanta Falcons" City="Atlanta" Name="Falcons" W="11" L="5" T="0" PCT="0.688" HOME="5-3" ROAD="6-2" DIV="5-1" CONF="9-3" PF="540" PA="406" DIFF="134" STRK="W4"></row>
+<row Team="Tampa Bay Buccaneers" City="Tampa Bay" Name="Buccaneers" W="9" L="7" T="0" PCT="0.563" HOME="4-4" ROAD="5-3" DIV="4-2" CONF="7-5" PF="354" PA="369" DIFF="-15" STRK="W1"></row>
+<row Team="New Orleans Saints" City="New Orleans" Name="Saints" W="7" L="9" T="0" PCT="0.438" HOME="4-4" ROAD="3-5" DIV="2-4" CONF="6-6" PF="469" PA="454" DIFF="15" STRK="L1"></row>
+<row Team="Carolina Panthers" City="Carolina" Name="Panthers" W="6" L="10" T="0" PCT="0.375" HOME="4-4" ROAD="2-6" DIV="1-5" CONF="5-7" PF="369" PA="402" DIFF="-33" STRK="L2"></row>
+<row Team="Seattle Seahawks" City="Seattle" Name="Seahawks" W="10" L="5" T="1" PCT="0.656" HOME="7-1" ROAD="3-4-2001" DIV="3-2-2001" CONF="6-5-2001" PF="354" PA="292" DIFF="62" STRK="W1"></row>
+<row Team="Arizona Cardinals" City="Arizona" Name="Cardinals" W="7" L="8" T="1" PCT="0.469" HOME="4-3-2001" ROAD="3-5" DIV="4-1-2001" CONF="6-5-2001" PF="418" PA="362" DIFF="56" STRK="W2"></row>
+<row Team="Los Angeles Rams" City="Los Angeles" Name="Rams" W="4" L="12" T="0" PCT="0.25" HOME="1-7" ROAD="3-5" DIV="2-4" CONF="3-9" PF="224" PA="394" DIFF="-170" STRK="L7"></row>
+<row Team="San Francisco 49ers" City="San Francisco" Name="49ers" W="2" L="14" T="0" PCT="0.125" HOME="1-7" ROAD="1-7" DIV="2-4" CONF="2-10" PF="309" PA="480" DIFF="-171" STRK="L1"></row>
+</root>

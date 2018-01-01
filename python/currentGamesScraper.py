@@ -16,11 +16,15 @@ obj = untangle.parse(gamesXML)
 seasonYearA = int(obj.ss.gms['y'])
 seasonYearB = seasonYearA + 1
 seasonId = str(seasonYearA) + '-' + str(seasonYearB)
-weekId = 'week' + obj.ss.gms['w']
+weekNum = int(obj.ss.gms['w'])
+weekId = 'week' + str(weekNum)
+prevWeekId = 'week' + str(weekNum - 1)
 dbWeekPath = seasonId + '/' + weekId
 week = root.child(dbWeekPath).get()
 weekLen = len(week)
 max = len(obj.ss.gms)
+if prevWeekId == 0:
+    firstWeek = True
 startedGameArray = []
 finishedGameArray = []
 
@@ -60,31 +64,51 @@ while True:
             dbPrevHomeLossPath = dbHomePath + '/losses'
             dbPrevAwayWinsPath = dbAwayPath + '/wins'
             dbPrevAwayLossPath = dbAwayPath + '/losses'
-            if homePoints > awayPoints:
-                homeWins = root.child(dbPrevHomeWinsPath).get() + 1
-                awayLosses = root.child(dbPrevAwayLossPath).get() + 1
+            if (homePoints > awayPoints):
+                if firstWeek:
+                    homeWins = 1
+                    homeLosses = 0
+                    awayWins = 0
+                    awayLosses = 1
+                else:
+                    homeWins = root.child(dbPrevHomeWinsPath).get() + 1
+                    homeLosses = root.child(dbPrevHomeLossPath)
+                    awayWins = root.child(dbPrevAwayWinsPath)
+                    awayLosses = root.child(dbPrevAwayLossPath).get() + 1
                 root.child(dbHomePath).update({
                     'points' : homePoints,
                     'winner' : True,
-                    'wins' : homeWins
+                    'wins' : homeWins,
+                    'losses' : homeLosses
                 })
                 root.child(dbAwayPath).update({
                     'points' : awayPoints,
                     'winner' : False,
+                    'wins' : awayWins,
                     'losses' : awayLosses
                 })
-            elif homePoints < awayPoints:
-                homeLosses = root.child(dbPrevHomeLossPath).get() + 1
-                awayWins = root.child(dbPrevAwayWinsPath).get() + 1
+            elif (homePoints < awayPoints):
+                if firstWeek:
+                    homeWins = 0
+                    homeLosses = 1
+                    awayWins = 1
+                    awayLosses = 0
+                else:
+                    homeWins = root.child(dbPrevHomeWinsPath).get()
+                    homeLosses = root.child(dbPrevHomeLossPath) + 1
+                    awayWins = root.child(dbPrevAwayWinsPath) + 1
+                    awayLosses = root.child(dbPrevAwayLossPath).get()
                 root.child(dbHomePath).update({
                     'points' : homePoints,
                     'winner' : False,
+                    'wins' : homeWins,
                     'losses' : homeLosses
                 })
                 root.child(dbAwayPath).update({
                     'points' : awayPoints,
                     'winner' : True,
-                    'losses' : awayWins
+                    'wins' : awayWins,
+                    'losses' : awayLosses
                 })
     print 'sleeping'
     time.sleep(5)
