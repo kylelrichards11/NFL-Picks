@@ -30,7 +30,7 @@ export class GamesComponent implements OnInit {
       var foundStarted = false;
       games.forEach(game => {
 
-        //get home and away team name without city for image name
+        //get home and away team name for image 
         var homeImgPath = "../assets/teamLogos/" + game.home.name.toLowerCase() + ".png"
         var awayImgPath = "../assets/teamLogos/" + game.away.name.toLowerCase() + ".png"
 
@@ -49,8 +49,10 @@ export class GamesComponent implements OnInit {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
-        this.gotData = true;
         this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
+        console.log('games', this.gameArray);
+        console.log('picks', this.userWeekPicks);
+        this.gotData = true;
       });
     });
 

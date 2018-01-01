@@ -5,10 +5,15 @@
         <a class="waves-effect waves-light btn" (click)="clearPicks()">Clear Picks</a>
       </div>
       <div *ngIf="weekHasStarted">
-        <div class="recordDisplay" *ngIf="gotData">
-          Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
+        <div *ngIf="userWeekPicks">
+          <div *ngIf="gotData" class="recordDisplay">
+            Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
+          </div>
         </div>
-        <div *ngIf="!gotData">
+        <div *ngIf="!gotData" class="recordDisplay">
+          Record: 0 - 0
+        </div>
+        <div *ngIf="!userWeekPicks" class="recordDisplay">
           Record: 0 - 0
         </div>
       </div>
@@ -49,13 +54,13 @@
                   <div *ngIf="userWeekPicks">
 
                     <!-- if the user has made a pick for this game yet -->
-                    <div *ngIf="userWeekPicks.games[game.gameId]" class="row">
+                    <div *ngIf="userWeekPicks[game.gameId]" class="row">
                       <div class="col s5">
 
                         <!-- if the game has ended -->
                         <div *ngIf="game.ended">
                           <!-- if the user picked away team -->
-                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                          <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
 
                             <!-- if the away team won -->
                             <div *ngIf="game.away.winner">
@@ -72,12 +77,12 @@
                         <!-- if the game has not ended -->
                         <div *ngIf="!game.ended">
                           <!-- if the user picked away team -->
-                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                          <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
                             <a class="waves-effect waves-light btn picked">Picked</a>
                           </div>
                         </div>
                         <!-- if the user did not pick away team -->
-                        <div *ngIf="userWeekPicks.games[game.gameId].pick != game.away.city + ' ' + game.away.name">
+                        <div *ngIf="userWeekPicks[game.gameId].pick != game.away.city + ' ' + game.away.name">
 
                           <!-- if the game has not yet started -->
                           <div *ngIf="!game.started">
@@ -90,7 +95,7 @@
                         <!-- if the game has ended -->
                         <div *ngIf="game.ended">
                           <!-- if the user picked home team -->
-                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.home.city + ' ' + game.home.name">
+                          <div *ngIf="userWeekPicks[game.gameId].pick == game.home.city + ' ' + game.home.name">
 
                             <!-- if the home team won -->
                             <div *ngIf="game.home.winner">
@@ -107,12 +112,12 @@
                         <!-- if the game has not ended -->
                         <div *ngIf="!game.ended">
                           <!-- if the user picked away team -->
-                          <div *ngIf="userWeekPicks.games[game.gameId].pick == game.home.city + ' ' + game.home.name">
+                          <div *ngIf="userWeekPicks[game.gameId].pick == game.home.city + ' ' + game.home.name">
                             <a class="waves-effect waves-light btn picked">Picked</a>
                           </div>
                         </div>
                         <!-- if the user did not pick away team -->
-                        <div *ngIf="userWeekPicks.games[game.gameId].pick != game.home.city + ' ' + game.home.name">
+                        <div *ngIf="userWeekPicks[game.gameId].pick != game.home.city + ' ' + game.home.name">
 
                           <!-- if the game has not yet started -->
                           <div *ngIf="!game.started">
@@ -123,7 +128,7 @@
                     </div>
 
                     <!-- if the user has not made a pick for this game yet -->
-                    <div *ngIf="!userWeekPicks.games[game.gameId]" class="row">
+                    <div *ngIf="!userWeekPicks[game.gameId]" class="row">
                       <div class="col s5">
                         <!-- if the game has not yet started -->
                         <div *ngIf="!game.started">
