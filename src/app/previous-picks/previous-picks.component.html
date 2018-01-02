@@ -1,0 +1,7 @@
+<div *ngIf="invalidSeasonAndWeek; else validSeasonAndWeek" class="center-align">
+    <h3>Oops! Please Choose a Season and a Week</h3>
+</div>
+<ng-template #validSeasonAndWeek>
+    <h3 class="center-align">{{seasonId}} Season, Week {{weekNum}} </h3>
+    <app-games [seasonId]="seasonId" [weekId]="weekId" makePicks="true" [userId]="userId"></app-games>
+</ng-template>

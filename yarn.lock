@@ -245,13 +245,32 @@
   dependencies:
     "@types/jasmine" "*"
 
-"@types/jquery@^3.2.17":
+"@types/jquery@*", "@types/jquery@^3.2.12", "@types/jquery@^3.2.17":
   version "3.2.17"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.17.tgz#01df9805dd5cf83a14cf5bfd81adced7d4fbd970"
+
+"@types/materialize-css@^0.100.0":
+  version "0.100.3"
+  resolved "https://registry.yarnpkg.com/@types/materialize-css/-/materialize-css-0.100.3.tgz#5cf9021cc13b83ff91129b86ada26195c075d9d2"
+  dependencies:
+    "@types/jquery" "*"
+    "@types/pickadate" "*"
+
+"@types/materialize-css@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/materialize-css/-/materialize-css-1.0.1.tgz#f06beace24f8c3f8aea5345987fb42c4b51bdf35"
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.94"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.94.tgz#70e509b07ed9f961c8f6f4a73a61d922be5029a7"
+
+"@types/pickadate@*":
+  version "3.5.31"
+  resolved "https://registry.yarnpkg.com/@types/pickadate/-/pickadate-3.5.31.tgz#b5d0c1b0f2b07653d41fded4aad2e86346a4247c"
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -3186,7 +3205,11 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
-"jquery@^3.0.0 || ^2.1.4", jquery@^3.2.1:
+jquery@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
+
+"jquery@^3.0.0 || ^2.1.4":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -3794,6 +3817,14 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ng2-materialize@^1.8.0-beta.0:
+  version "1.8.0-beta.0"
+  resolved "https://registry.yarnpkg.com/ng2-materialize/-/ng2-materialize-1.8.0-beta.0.tgz#95b6667a32e2d755227e14c554535d06be0b8cae"
+  dependencies:
+    "@types/jquery" "^3.2.12"
+    "@types/materialize-css" "^0.100.0"
+    materialize-css "^0.100.2"
 
 no-case@^2.2.0:
   version "2.3.2"

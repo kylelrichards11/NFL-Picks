@@ -1,5 +1,9 @@
 import { environment } from '../environments/environment';
 
+//NG2-MATERIALIZE MODULES
+import { MzSelectModule, MzSelectDirective } from 'ng2-materialize';
+import { MzValidationModule } from 'ng2-materialize';
+
 // MODULES
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,6 +14,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // SERVICES
 import { DatabaseService } from './services/database.service';
@@ -28,10 +33,8 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GamesComponent } from './games/games.component';
 import { SeasonComponent } from './season/season.component';
-
-
-
-
+import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
+import { ChoosePreviousPicksComponent } from './choose-previous-picks/choose-previous-picks.component';
 
 
 @NgModule({
@@ -44,7 +47,9 @@ import { SeasonComponent } from './season/season.component';
     SignupComponent,
     DashboardComponent,
     GamesComponent,
-    SeasonComponent
+    SeasonComponent,
+    PreviousPicksComponent,
+    ChoosePreviousPicksComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,10 @@ import { SeasonComponent } from './season/season.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    MzSelectModule,
+    ReactiveFormsModule,
+    MzValidationModule
   ],
   providers: [DatabaseService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
