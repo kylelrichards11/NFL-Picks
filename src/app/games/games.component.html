@@ -33,17 +33,29 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col s5 center-align">
+                <div *ngIf="game.away.ties; else noTiesAway" class="col s5 center-align">
                   <p>{{game.away.city}} {{game.away.name}}</p>
-                  <p>({{game.away.wins}} - {{game.away.losses}})</p>
+                  <p>({{game.away.wins}} - {{game.away.losses}} - {{game.away.ties}})</p>
                 </div>
+                <ng-template #noTiesAway>
+                  <div class="col s5 center-align">
+                    <p>{{game.away.city}} {{game.away.name}}</p>
+                    <p>({{game.away.wins}} - {{game.away.losses}})</p>
+                  </div>
+                </ng-template>
                 <div class="col s2 center-align">
                   <p>@</p>
                 </div>
-                <div class="col s5 center-align">
+                <div *ngIf="game.home.ties; else noTiesHome" class="col s5 center-align">
                   <p>{{game.home.city}} {{game.home.name}}</p>
-                  <p>({{game.home.wins}} - {{game.home.losses}})</p>
+                  <p>({{game.home.wins}} - {{game.home.losses}} - {{game.home.ties}})</p>
                 </div>
+                <ng-template #noTiesHome>
+                  <div class="col s5 center-align">
+                    <p>{{game.home.city}} {{game.home.name}}</p>
+                    <p>({{game.home.wins}} - {{game.home.losses}})</p>
+                  </div>
+                </ng-template>
               </div>
               <div class="row pointsDisplay">
                 <div class="col s5 center-align">
