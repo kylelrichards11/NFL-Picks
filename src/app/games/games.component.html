@@ -45,6 +45,17 @@
                   <p>({{game.home.wins}} - {{game.home.losses}})</p>
                 </div>
               </div>
+              <div class="row pointsDisplay">
+                <div class="col s5 center-align">
+                  <p>{{game.away.points}}</p>
+                </div>
+                <div class="col s2 center-align">
+                  <p>-</p>
+                </div>
+                <div class="col s5 center-align">
+                  <p>{{game.home.points}}</p>
+                </div>
+              </div>
               <div *ngIf="makePicks">
 
                 <!-- if data has loaded -->

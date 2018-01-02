@@ -4,6 +4,8 @@ export class Team {
         public name: string,
         public wins: string,
         public losses: string,
+        public ties: string,
+        public points: number,
         public winner: boolean
     ) { }
 }

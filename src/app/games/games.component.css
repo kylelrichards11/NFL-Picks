@@ -32,3 +32,8 @@ p {
     padding-top: 4px;
     padding-bottom: 4px;
 }
+
+.pointsDisplay {
+    font-size: 2em;
+    font-weight: 320;
+}

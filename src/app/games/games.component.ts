@@ -50,8 +50,6 @@ export class GamesComponent implements OnInit {
       this.userId = user_id;
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
         this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
-        console.log('games', this.gameArray);
-        console.log('picks', this.userWeekPicks);
         this.gotData = true;
       });
     });

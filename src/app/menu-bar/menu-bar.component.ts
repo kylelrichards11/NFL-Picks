@@ -13,7 +13,6 @@ export class MenuBarComponent implements OnInit {
   constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit() {
-    $('.button-collapse').sideNav();
   }
 
   signout() {
