@@ -58,6 +58,7 @@ for i in range(0, max):
         'name' : obj.root.row[i]['Name'],
         'currentWins' : obj.root.row[i]['W'],
         'currentLosses' : obj.root.row[i]['L'],
+        'currentTies' : obj.root.row[i]['T'],
         'pointsFor' : obj.root.row[i]['PF'],
         'pointsAgainst' : obj.root.row[i]['PA']
     })
