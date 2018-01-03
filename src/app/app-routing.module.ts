@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SeasonComponent } from './season/season.component';
 import { ChoosePreviousPicksComponent } from './choose-previous-picks/choose-previous-picks.component';
 import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
+import { MakePicksComponent } from './make-picks/make-picks.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [ AuthGuard ] },
   { path: 'season/:seasonId', component: SeasonComponent, canActivate: [ AuthGuard ] },
   { path: 'choosePreviousPicks', component: ChoosePreviousPicksComponent, canActivate: [ AuthGuard ]},
-  { path: 'previousPicks/:seasonId/:weekId', component: PreviousPicksComponent, canActivate: [AuthGuard ]}
+  { path: 'previousPicks/:seasonId/:weekId', component: PreviousPicksComponent, canActivate: [AuthGuard ]},
+  { path: 'makePicks/:seasonId/:weekId', component: MakePicksComponent, canActivate: [AuthGuard ]}
 ];
 
 @NgModule({

@@ -11,14 +11,26 @@ import { Game } from '../classes/game';
 })
 export class HomeComponent implements OnInit {
 
-  weekNum = 'week16';
+  seasonId = '2017-2018';
+  weekId;
 
   constructor(public dbSrv: DatabaseService, public adb: AngularFireDatabase) { }
 
   ngOnInit() {
 
-
-
-
+    this.adb.list<any>('2017-2018').valueChanges().subscribe(season => {
+      console.log(season);
+      var foundCurrentWeek = false;
+      season.forEach(week => {
+        if(!week.ended && !foundCurrentWeek) {
+          this.weekId = week.weekId;
+          foundCurrentWeek = true;
+        }
+      });
+      if(!foundCurrentWeek) {
+        console.log('never found week')
+        this.weekId = 'week17';
+      }
+    });
   }
 }

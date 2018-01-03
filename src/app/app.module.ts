@@ -35,6 +35,7 @@ import { GamesComponent } from './games/games.component';
 import { SeasonComponent } from './season/season.component';
 import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
 import { ChoosePreviousPicksComponent } from './choose-previous-picks/choose-previous-picks.component';
+import { MakePicksComponent } from './make-picks/make-picks.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ChoosePreviousPicksComponent } from './choose-previous-picks/choose-pre
     GamesComponent,
     SeasonComponent,
     PreviousPicksComponent,
-    ChoosePreviousPicksComponent
+    ChoosePreviousPicksComponent,
+    MakePicksComponent
   ],
   imports: [
     BrowserModule,

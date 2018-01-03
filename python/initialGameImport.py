@@ -62,6 +62,10 @@ seasonURLArray = [2015, 2016, 2017]
 seasonDbArray = ["2015-2016", "2016-2017", "2017-2018"]
 
 for i in range(0, 3): #loop through 3 seasons
+    root.child(seasonDbArray[i]).update({
+        'ended' : True,
+        'seasonId' : seasonDbArray[i]
+    })
     for team in teams.itervalues(): #reset dictionary
         team.wins = 0
         team.losses = 0
@@ -70,6 +74,12 @@ for i in range(0, 3): #loop through 3 seasons
         gamesXML = 'http://www.nfl.com/ajax/scorestrip?season=' + str(seasonURLArray[i]) + '&seasonType=REG&week=' + str(j) #get XML from NFLGameCenter
         obj = untangle.parse(gamesXML) #get object from XML
         numberOfGames = len(obj.ss.gms)
+        weekId = 'week' + str(j)
+        dbWeekPath = seasonDbArray[i] + '/' + weekId
+        root.child(dbWeekPath).update({
+            'weekId' : weekId,
+            'ended' : True
+        })
         for k in range(0, numberOfGames): #loop through games in week
             awayTeamId = obj.ss.gms.g[k]['v']
             homeTeamId = obj.ss.gms.g[k]['h']
