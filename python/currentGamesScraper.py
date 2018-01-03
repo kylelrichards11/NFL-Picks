@@ -1,6 +1,6 @@
+import time
 import untangle
 import firebase_admin
-import time
 from firebase_admin import credentials
 from firebase_admin import db
 
@@ -23,7 +23,7 @@ seasonId = str(seasonYearA) + '-' + str(seasonYearB)
 weekNum = int(obj.ss.gms['w'])
 weekId = 'week' + str(weekNum)
 
-dbWeekPath = seasonId + '/' + weekId #make the db path for the week, ex: '2015-2016/week1'
+dbWeekPath = seasonId + '/weeks/' + weekId #make the db path for the week, ex: '2015-2016/weeks/week1'
 
 numberOfGames = len(obj.ss.gms)
 
@@ -48,7 +48,7 @@ while True:
         awayTeamId = obj.ss.gms.g[i]['v']
         homePoints = obj.ss.gms.g[i]['hs']
         awayPoints = obj.ss.gms.g[i]['vs']
-        dbGamePath = dbWeekPath + '/' + gameId
+        dbGamePath = dbWeekPath + '/games/' + gameId
         dbHomePath = dbGamePath + '/home'
         dbAwayPath = dbGamePath + '/away'
         root.child(dbHomePath).update({ #update the home score

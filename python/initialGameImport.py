@@ -62,7 +62,7 @@ seasonURLArray = [2015, 2016, 2017]
 seasonDbArray = ["2015-2016", "2016-2017", "2017-2018"]
 
 for i in range(0, 3): #loop through 3 seasons
-    root.child(seasonDbArray[i]).update({
+    root.child(seasonDbArray[i] + '/seasonInfo').update({
         'ended' : True,
         'seasonId' : seasonDbArray[i]
     })
@@ -75,8 +75,8 @@ for i in range(0, 3): #loop through 3 seasons
         obj = untangle.parse(gamesXML) #get object from XML
         numberOfGames = len(obj.ss.gms)
         weekId = 'week' + str(j)
-        dbWeekPath = seasonDbArray[i] + '/' + weekId
-        root.child(dbWeekPath).update({
+        dbWeekPath = seasonDbArray[i] + '/weeks/' + weekId
+        root.child(dbWeekPath + '/weekInfo').update({
             'weekId' : weekId,
             'ended' : True
         })
@@ -85,7 +85,7 @@ for i in range(0, 3): #loop through 3 seasons
             homeTeamId = obj.ss.gms.g[k]['h']
             gameId = obj.ss.gms.g[k]['gsis'] #get the id assigned to the game by the XML
             print teams[awayTeamId].city, teams[awayTeamId].name, "@", teams[homeTeamId].city, teams[homeTeamId].name
-            dbPath = seasonDbArray[i] + '/week' + str(j) + '/' + str(gameId)
+            dbPath = dbWeekPath + '/games/' + str(gameId)
             date = obj.ss.gms.g[k]['eid']
             month = monthsArray[int(date[4] + date[5])-1] #get month from date
             day = date[6] + date[7] #get day from date

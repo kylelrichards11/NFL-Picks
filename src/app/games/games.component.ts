@@ -25,7 +25,52 @@ export class GamesComponent implements OnInit {
 
   ngOnInit() {
 
-    this.adb.list<Game>('/' + this.seasonId + '/' + this.weekId).valueChanges().subscribe(games => {
+    if (this.weekId === 'currentWeek') { //if the component input wants the current week
+      // subscrive to all weeks in the season
+      this.adb.list<any>('2017-2018/weeks').valueChanges().subscribe(season => {
+
+        //make an array to hold the numbers of weeks that have not yet ended
+        var notEndedWeekArray = new Array();
+        notEndedWeekArray = [];
+
+        //loop through weeks in database and check if they have ended
+        season.forEach(week => {
+
+          // if the week has not ended
+          if (!week.weekInfo.ended) {
+            var weekNum = week.weekInfo.weekId.split(/(\d+)/) //get the week's number
+            notEndedWeekArray.push(weekNum[1]); //add the number to the array
+          }
+        });
+
+        //if the array is empty, then all weeks must have ended
+        if (!notEndedWeekArray.length) {
+          this.weekId = 'week17'; //if the season has ended, display the last week
+        }
+
+        //if the array is not empty, then there must be weeks that have not ended
+        else {
+          var minNum = 18; //minNum stores the week number that is the lowest (first occuring in the season)
+                           //we use 18 since week 17 is the highest possible week
+          for (let num of notEndedWeekArray) { // loop through the array
+            if (Number(num) < minNum) { // if the number in the array is less than the current min, 
+              minNum = Number(num); //make that the min
+            }
+          }
+          // once we have the lowest week number that has not ended, 
+          this.weekId = 'week' + String(minNum); //append that number to 'week' to make the weekId
+        }
+        this.getWeekGameInfo(); //get the games for the weekId to display
+      });
+    }
+    else { //if we already know the weekId we want
+      this.getWeekGameInfo(); //get the games for the weekId to display
+    }
+  }
+
+  getWeekGameInfo() {
+    console.log('weekId: ', this.weekId)
+    this.adb.list<Game>('/' + this.seasonId + '/weeks/' + this.weekId + '/games').valueChanges().subscribe(games => {
       this.gameArray = [];
       var foundStarted = false;
       games.forEach(game => {
@@ -37,8 +82,8 @@ export class GamesComponent implements OnInit {
         let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, game.ended, homeImgPath, awayImgPath);
         this.gameArray.push(uniqueGame);
 
-        if(!foundStarted) {
-          if(game.started) {
+        if (!foundStarted) {
+          if (game.started) {
             this.weekHasStarted = true;
             foundStarted = true;
           }
@@ -53,13 +98,11 @@ export class GamesComponent implements OnInit {
         this.gotData = true;
       });
     });
-
-    
   }
 
   pickTeam(teamCity, teamName, gameId) {
     var pick = teamCity + " " + teamName;
-    this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({pick: pick});
+    this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({ pick: pick });
   }
 
   clearPicks() {
