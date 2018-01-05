@@ -10,10 +10,7 @@
             Record: {{userWeekPicks.correct}} - {{userWeekPicks.incorrect}}
           </div>
         </div>
-        <div *ngIf="!gotData" class="recordDisplay">
-          Record: 0 - 0
-        </div>
-        <div *ngIf="!userWeekPicks" class="recordDisplay">
+        <div *ngIf="!gotData || !userWeekPicks" class="recordDisplay">
           Record: 0 - 0
         </div>
       </div>

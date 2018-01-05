@@ -18,7 +18,7 @@ export class GamesComponent implements OnInit {
   gameArray = new Array();
   userWeekPicks = false;
   gotData = false;
-  weekHasStarted = false;
+  weekHasStarted = true;
   makePicks = false;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
