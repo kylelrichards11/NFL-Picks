@@ -249,18 +249,12 @@
   version "3.2.17"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.17.tgz#01df9805dd5cf83a14cf5bfd81adced7d4fbd970"
 
-"@types/materialize-css@^0.100.0":
+"@types/materialize-css@^0.100.0", "@types/materialize-css@^0.100.2":
   version "0.100.3"
   resolved "https://registry.yarnpkg.com/@types/materialize-css/-/materialize-css-0.100.3.tgz#5cf9021cc13b83ff91129b86ada26195c075d9d2"
   dependencies:
     "@types/jquery" "*"
     "@types/pickadate" "*"
-
-"@types/materialize-css@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@types/materialize-css/-/materialize-css-1.0.1.tgz#f06beace24f8c3f8aea5345987fb42c4b51bdf35"
-  dependencies:
-    "@types/jquery" "*"
 
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.94"

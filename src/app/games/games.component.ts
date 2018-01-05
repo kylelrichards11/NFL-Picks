@@ -13,13 +13,13 @@ export class GamesComponent implements OnInit {
 
   @Input() seasonId: string;
   @Input() weekId: string;
-  @Input() makePicks: boolean = false;
   @Input() userId: string;
 
   gameArray = new Array();
   userWeekPicks = false;
   gotData = false;
   weekHasStarted = false;
+  makePicks = false;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -51,7 +51,7 @@ export class GamesComponent implements OnInit {
         //if the array is not empty, then there must be weeks that have not ended
         else {
           var minNum = 18; //minNum stores the week number that is the lowest (first occuring in the season)
-                           //we use 18 since week 17 is the highest possible week
+          //we use 18 since week 17 is the highest possible week
           for (let num of notEndedWeekArray) { // loop through the array
             if (Number(num) < minNum) { // if the number in the array is less than the current min, 
               minNum = Number(num); //make that the min
@@ -69,7 +69,6 @@ export class GamesComponent implements OnInit {
   }
 
   getWeekGameInfo() {
-    console.log('weekId: ', this.weekId)
     this.adb.list<Game>('/' + this.seasonId + '/weeks/' + this.weekId + '/games').valueChanges().subscribe(games => {
       this.gameArray = [];
       var foundStarted = false;
@@ -97,6 +96,7 @@ export class GamesComponent implements OnInit {
         this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
         this.gotData = true;
       });
+      this.makePicks = true;
     });
   }
 
