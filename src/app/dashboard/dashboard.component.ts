@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
 
   userId;
   userHistory;
+  percentCorrect = '0';
 
   public picksByWeekBarChartOptions: any = {
     scaleShowVerticalLines: false,
@@ -60,6 +61,8 @@ export class DashboardComponent implements OnInit {
       this.userId = user_id; //Get the User Id
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {  //subscribe to the user
         this.userHistory = user;
+        this.percentCorrect = ((Number(user.correct)/(Number(user.correct) + Number(user.incorrect))) * 100).toFixed(2);
+        console.log(this.percentCorrect)
       });
 
       var allData: any[] = []; //an array that holds the data that the bar graph will display
@@ -81,7 +84,6 @@ export class DashboardComponent implements OnInit {
 
           //push the season's data to the array for all seasons
           allData.push({ data: seasonDataArray, label: seasonIdsArray[Number(i)] });
-          console.log('push', allData)
 
           //if this is the last season, save all season data to the barChartData array
           if (Number(i) === seasonNumber - 1) {
