@@ -26,8 +26,8 @@ export class GamesComponent implements OnInit {
   ngOnInit() {
 
     if (this.weekId === 'currentWeek') { //if the component input wants the current week
-      // subscrive to all weeks in the season
-      this.adb.list<any>('2017-2018/weeks').valueChanges().subscribe(season => {
+      // subscribe to all weeks in the season
+      this.adb.list<any>(this.seasonId + '/weeks').valueChanges().subscribe(season => {
 
         //make an array to hold the numbers of weeks that have not yet ended
         var notEndedWeekArray = new Array();

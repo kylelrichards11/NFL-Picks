@@ -15,7 +15,7 @@ export class MakePicksComponent implements OnInit {
   seasonId
   weekId
   userId
-  weekNum
+  weekDisplay
   invalidSeasonAndWeek = true;
 
   ngOnInit() {
@@ -23,14 +23,19 @@ export class MakePicksComponent implements OnInit {
       this.seasonId = params['seasonId'];
       this.weekId = params['weekId'];
     });
-    if ((this.seasonId != 'undefined') && (this.weekId != 'undefined')) {
+    if((this.seasonId != 'undefined') && (this.weekId != 'undefined')) {
       this.invalidSeasonAndWeek = false;
     }
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
     });
-    var weekIdArray = this.weekId.split(/(\d+)/)
-    this.weekNum = weekIdArray[1];
+    if(this.weekId === 'currentWeek') {
+      this.weekDisplay = 'Current Week'
+    }
+    else {
+      var weekIdArray = this.weekId.split(/(\d+)/);
+      this.weekDisplay = 'Week ' + String(weekIdArray[1]);
+    }
   }
 
 }
