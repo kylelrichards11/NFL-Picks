@@ -15,6 +15,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
 
 // SERVICES
 import { DatabaseService } from './services/database.service';
@@ -63,7 +64,8 @@ import { MakePicksComponent } from './make-picks/make-picks.component';
     FormsModule,
     MzSelectModule,
     ReactiveFormsModule,
-    MzValidationModule
+    MzValidationModule,
+    ChartsModule
   ],
   providers: [DatabaseService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
