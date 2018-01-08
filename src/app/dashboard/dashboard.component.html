@@ -12,11 +12,21 @@
   </div>
 </div>
 <div class="container">
-<!-- Picks by week bar chart -->
-  <div class="row">
+  <!-- Picks by week seasons bar chart -->
+  <div *ngIf="!showTrend" class="row">
     <div style="display: block">
-      <canvas baseChart [datasets]="picksByWeekBarChartData" [labels]="picksByWeekBarChartLabels" [options]="picksByWeekBarChartOptions" [legend]="picksByWeekBarChartLegend"
-        [chartType]="picksByWeekBarChartType"></canvas>
+      <canvas baseChart [datasets]="picksByWeekBarChartData" [labels]="picksByWeekBarChartLabels" [options]="picksByWeekBarChartOptions"
+        [legend]="picksByWeekBarChartLegend" [chartType]="picksByWeekBarChartType"></canvas>
     </div>
+  </div>
+  <!-- Picks by week trend bar chart -->
+  <div *ngIf="showTrend" class="row">
+    <div style="display: block">
+      <canvas baseChart [datasets]="picksByWeekBarChartTrendData" [labels]="picksByWeekBarChartLabels" [options]="picksByWeekBarChartOptions"
+        [legend]="picksByWeekBarChartLegend" [chartType]="picksByWeekBarChartType"></canvas>
+    </div>
+  </div>
+  <div class="row">
+    <a (click)='correctPicksByWeekButtonClicked()' class="col s4 offset-s4 center-align btn-large">{{correctPicksByWeekButtonText}}</a>
   </div>
 </div>

@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
   userId;
   userHistory;
   percentCorrect = '0';
+  correctPicksByWeekButtonText = 'Show Average'
+  showTrend = false;
 
   public picksByWeekBarChartOptions: any = {
     scaleShowVerticalLines: false,
@@ -24,10 +26,12 @@ export class DashboardComponent implements OnInit {
         scaleLabel: {
           display: true,
           labelString: 'Correct Picks',
-          fontSize: 16
+          fontSize: 16,
+          max: 16
         },
         ticks: {
-          beginAtZero: true
+          beginAtZero: true,
+          max: 16
         }
       }],
       xAxes: [{
@@ -56,18 +60,26 @@ export class DashboardComponent implements OnInit {
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2017-2018' }
   ];
 
+  picksByWeekBarChartTrendData: any[] = [{ data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Trend by Week' }]
+
   ngOnInit() {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id; //Get the User Id
       this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {  //subscribe to the user
         this.userHistory = user;
         this.percentCorrect = ((Number(user.correct)/(Number(user.correct) + Number(user.incorrect))) * 100).toFixed(2);
-        console.log(this.percentCorrect)
       });
 
-      var allData: any[] = []; //an array that holds the data that the bar graph will display
+      var allSeasonData: any[] = []; //an array that holds the data for all seasons that the bar graph will display
+      var allTrendData: any[] = []; //an array that holds the data for the trend of data by week that the bar graph will display
       let seasonIdsArray = ['2015-2016', '2016-2017', '2017-2018']; //an array of ids for each season
-      let seasonNumber = seasonIdsArray.length
+      let numberOfSeasons = seasonIdsArray.length
+
+      //an array that will hold the data for each week across all seasons
+      var trendDataArray = new Array(17);
+      for (var i = 0; i < 17; i++) { 
+        trendDataArray[Number(i)] = 0; //initialize the array to have 0
+      }
 
       //loop through each season
       for (let i in seasonIdsArray) {
@@ -75,22 +87,43 @@ export class DashboardComponent implements OnInit {
         //subscribe to the season
         this.adb.list<Week>('/users/' + this.userId + '/seasons/' + seasonIdsArray[Number(i)] + '/weeks').valueChanges().subscribe(weeks => {
 
-          var seasonDataArray = new Array(17); //an array to hold the data for each week
+          var seasonDataArray = new Array(17); //an array to hold the data for each week of this season
 
           weeks.forEach(week => { //iterate through weeks
-            let weekNum = week.weekId.split(/(\d+)/) //get the number of the week from the week id
-            seasonDataArray[Number(weekNum[1]) - 1] = week.correct //store the number of the correct picks in the correct spot in the seasonDataArray (weekNum - 1)
+            let weekNum = week.weekId.split(/(\d+)/); //get the number of the week from the week id
+            seasonDataArray[Number(weekNum[1]) - 1] = week.correct; //store the number of the correct picks in the correct spot in the seasonDataArray (weekNum - 1)
+            trendDataArray[Number(weekNum[1]) - 1] += week.correct; //add the number of correct picks for that week across all seasons
           });
 
           //push the season's data to the array for all seasons
-          allData.push({ data: seasonDataArray, label: seasonIdsArray[Number(i)] });
+          allSeasonData.push({ data: seasonDataArray, label: seasonIdsArray[Number(i)] });
 
           //if this is the last season, save all season data to the barChartData array
-          if (Number(i) === seasonNumber - 1) {
-            this.picksByWeekBarChartData = allData;
+          if (Number(i) === numberOfSeasons - 1) {
+            this.picksByWeekBarChartData = allSeasonData;
+
+            //get trend data by finding average of all weeks
+            for (let j in trendDataArray) {
+              trendDataArray[Number(j)] = Number((trendDataArray[Number(j)] / 3).toFixed(2));
+            }
+            console.log('filled in array', trendDataArray)
+            allTrendData.push({ data: trendDataArray, label: 'Average by Week'}); //push the data to an empty array
+            this.picksByWeekBarChartTrendData = allTrendData; //set the trend data class variable to this array
+            //NOTE: The only reason I did the last two steps is because that this the way I did it for the season data, which works
           }
         });
       }
     });
+  }
+
+  correctPicksByWeekButtonClicked() {
+    if(this.showTrend) {
+      this.correctPicksByWeekButtonText = 'Show Average';
+      this.showTrend = false;
+    }
+    else {
+      this.correctPicksByWeekButtonText = 'Show Each Season';
+      this.showTrend = true;
+    }
   }
 }
