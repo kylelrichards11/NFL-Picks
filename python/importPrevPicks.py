@@ -3,6 +3,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
+#dictionary that translates either just city or just name to city and name
 teams = { 
     "Arizona" : "Arizona Cardinals",
     "Cardinals" : "Arizona Cardinals",
@@ -69,6 +70,7 @@ teams = {
     "Redskins" : "Washington Redskins"
 }
 
+#firebase authentication
 cred = credentials.Certificate('NFL-Picks-11f89026ddbd.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL' : 'https://nfl-picks-b5e4d.firebaseio.com'
@@ -80,16 +82,19 @@ obj = untangle.parse('picks.xml')
 kyleUID = 'H3EI5DDrbldJEg2FxEk6N9oYnaf2'
 dadUID = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
 
-UIDs = [kyleUID, dadUID]
+UIDs = [kyleUID, dadUID] #an array of our user ids
 userNames = ['Kyle', 'Dad']
-usersNum = len(UIDs)
-gameIds = [56502, 56900, 57233]
+usersNum = len(UIDs) #number of users
+
+gameIds = [56169, 56502, 56900, 57233] #this array holds the number before the first game id of each season
 gameIdsIndex = 0
 
-max = len(obj.root)
+games = len(obj.root) #the number of games we are looking through
 
-for user in range(0, usersNum):
-    print 'user' + str(user)
+for user in range(0, usersNum): #for each user
+    print userNames[user]
+    totalCorrect = 0 #reset cumulative stats
+    totalIncorrect = 0
     prevWeek = 0
     prevSeason = 0
     weekCorrectCount = 0
@@ -97,38 +102,41 @@ for user in range(0, usersNum):
     seasonCorrect = 0
     seasonIncorrect = 0
     gameIdsIndex = 0
-    for i in range(0, max):
-        if prevSeason != obj.root.row[i]['Season']:
-            dbSeasonUserPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season']
-            newSeason = root.child(dbSeasonUserPath).update({
+    for i in range(0, games): # for each game
+        if prevSeason != obj.root.row[i]['Season']: #if this game's season is different than the last game's season
+            seasonId = obj.root.row[i]['Season'] #update the season id
+            dbSeasonUserPath = 'users/' + UIDs[user] + '/seasons/' + seasonId
+            root.child(dbSeasonUserPath).update({ #write season year to the database
                 'year' : obj.root.row[i]['Season']
             })
             print obj.root.row[i]['Season']
-            if prevSeason != 0:
+            if prevSeason != 0: #if there was a previous season
                 dbPrevSeasonUserPath = 'users/' + UIDs[user] + '/seasons/' + prevSeason
-                newSeasonCorrectIncorrect = root.child(dbPrevSeasonUserPath).update({
+                newSeasonCorrectIncorrect = root.child(dbPrevSeasonUserPath).update({ #write stats to database
                     'correct' : seasonCorrect,
                     'incorrect' : seasonIncorrect
                 })
-            seasonCorrect = 0
+            totalCorrect += seasonCorrect #update the user's total correct and incorrect
+            totalIncorrect += seasonIncorrect
+            seasonCorrect = 0 #reset stats
             seasonIncorrect = 0
-            gameId = gameIds[gameIdsIndex]
+            gameId = gameIds[gameIdsIndex] #get the starting game id for this season
             gameIdsIndex += 1
-            prevSeason = obj.root.row[i]['Season']
-        if prevWeek != obj.root.row[i]['Week']:
-            prevWeek = obj.root.row[i]['Week']
+            prevSeason = obj.root.row[i]['Season'] #set previous season to this season
+        if prevWeek != obj.root.row[i]['Week']: #if this game's week is different than the last game's week
+            prevWeek = obj.root.row[i]['Week'] #set previous week to this week
             dbPathWeekId = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week'])
-            weekId = 'week' + str(obj.root.row[i]['Week'])
+            weekId = 'week' + str(obj.root.row[i]['Week']) #get weekId and write to database
             newWeekId = root.child(dbPathWeekId).update({
                 'weekId' : weekId
             })
             print weekId
-            firstGameInWeek = i
-            dbPathWeek = obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week'])
-            week = root.child(dbPathWeek).get()
-            gamesInWeek = len(week)
-            lastGameInWeek = firstGameInWeek + gamesInWeek
-            for j in range (0, gamesInWeek):
+            firstGameInWeek = i #set first game in week equal to iterator
+            dbPathWeek = obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/games'
+            week = root.child(dbPathWeek).get() #get the games for this week from database
+            gamesInWeek = len(week) #get the number of the games in this week
+            lastGameInWeek = firstGameInWeek + gamesInWeek #calculate the iterator for the last game in the week
+            for j in range (0, gamesInWeek): #iterate through games in week in database
                 gameId += 1
                 if gameId == 57241 and weekId == 'week1': #dealing with buccaneers dolphins postponed game
                     gameId = 57242
@@ -142,59 +150,71 @@ for user in range(0, usersNum):
                 dbPathAwayName = obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week'] + '/games/' + str(gameId) + '/away/name')
                 homeCity = root.child(dbPathHomeCity).get()
                 homeName = root.child(dbPathHomeName).get()
-                homeBoth = homeCity + ' ' + homeName
+                homeBoth = homeCity + ' ' + homeName #save the home team city and name i.e. New England Patriots
                 awayCity = root.child(dbPathAwayCity).get()
                 awayName = root.child(dbPathAwayName).get()
-                awayBoth = awayCity + ' ' + awayName
-                for k in range(firstGameInWeek, lastGameInWeek):
+                awayBoth = awayCity + ' ' + awayName #save the away team city and name
+                for k in range(firstGameInWeek, lastGameInWeek): #for each pick in the week, check if it was for this game
                     userName = userNames[user]
                     userPick = obj.root.row[k][userName]
-                    if userPick == "St. Louis":
-                        userPick = "Saint Louis"
-                    elif userPick == "Rams":
-                        if obj.root.row[i]['Season'] == '2015-2016':
+                    if userPick == "St. Louis" or userPick == "St. Louis Rams": #deal with using St. Louis as an abbreviation for Saint Louis
+                        userPick = "Saint Louis Rams"
+                    elif userPick == "Rams": #deal with Rams changing cities
+                        if obj.root.row[i]['Season'] == '2015-2016' or obj.root.row[i]['Season'] == '2014-2015':
                             userPick = "Saint Louis Rams"
                         else:
                             userPick = "Los Angeles Rams"
-                    elif userPick == "Chargers":
+                    elif userPick == "Chargers": #deal with Chargers changing cities
                         if obj.root.row[i]['Season'] == '2017-2018':
                             userPick = "Los Angeles Chargers"
                         else:
                             userPick = "San Diego Chargers"
-                    if userPick in homeBoth or userPick in awayBoth:
+                    if userPick in homeBoth or userPick in awayBoth: #if the user pick is for this game
                         dbSetUserPickPath = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/' + str(gameId)
-                        if userPick == homeBoth or userPick == awayBoth:
-                            newPick = root.child(dbSetUserPickPath).set({
+                        if userPick == homeBoth or userPick == awayBoth: #if the user pick is already the full name
+                            newPick = root.child(dbSetUserPickPath).set({ #record pick in the database
                                 'pick' : userPick
                             })
-                        else:
-                            userPick = teams[userPick]
-                            newPick = root.child(dbSetUserPickPath).set({
+                        else: #if the user only had city or name
+                            userPick = teams[userPick] #get the full name from dictionary
+                            newPick = root.child(dbSetUserPickPath).set({ #record pick in database
                                 'pick' : userPick
                             })
-                            print gameId
-                        if userPick == homeBoth:
+                        print gameId, userPick
+                        if userPick == homeBoth: #if the user picked the home team
                             dbPathHome = obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/games/' + str(gameId) + '/home/winner'
-                            correct = root.child(dbPathHome).get()
-                            if correct:
-                                weekCorrectCount += 1
-                            else:
-                                weekIncorrectCount += 1
-                        elif userPick == awayBoth:
+                            correct = root.child(dbPathHome).get() #get whether home team won
+                            if correct: #if the home team won
+                                weekCorrectCount += 1 #add one to the number of correct picks for this week
+                            else: #if the home team did not win
+                                weekIncorrectCount += 1 #add one to the number of incorrect picks for this week
+                        elif userPick == awayBoth: #if the user picked the away team
                             dbPathAway = obj.root.row[i]['Season'] + '/weeks/week' + str(obj.root.row[i]['Week']) + '/games/' + str(gameId) + '/away/winner'
-                            correct = root.child(dbPathAway).get()
-                            if correct:
-                                weekCorrectCount += 1
-                            else:
-                                weekIncorrectCount += 1
+                            correct = root.child(dbPathAway).get() #get whether away team won
+                            if correct: #if the away team won
+                                weekCorrectCount += 1 #add one to the number of correct picks for this week
+                            else: #if the away team did not win
+                                weekIncorrectCount += 1 #add one to the number of incorrect picks for this week
             dbPathUserWeek = 'users/' + UIDs[user] + '/seasons/' + obj.root.row[i]['Season'] + '/weeks/' + weekId
-            newCorrect = root.child(dbPathUserWeek).update({
-                'correct' : weekCorrectCount
+            newCorrect = root.child(dbPathUserWeek).update({ #when all games in the week have been gone through
+                'correct' : weekCorrectCount #update number of correct picks for this week in the database
             })
             newIncorrecrt = root.child(dbPathUserWeek).update({
-                'incorrect' : weekIncorrectCount
+                'incorrect' : weekIncorrectCount #update number of incorrect picks for this week in the database
             })
-            seasonCorrect += weekCorrectCount
-            seasonIncorrect += weekIncorrectCount
-            weekCorrectCount = 0
+            seasonCorrect += weekCorrectCount #add the number of correct picks for the week to the number of correct picks for the season
+            seasonIncorrect += weekIncorrectCount #add the number of incorrect picks for the week to the number of incorrect picks for the season
+            weekCorrectCount = 0 #reset the number of correct and incorrect picks for the week
             weekIncorrectCount = 0
+    totalCorrect += seasonCorrect #when the user ends, update the total number of correct and incorrect picks from the last season for the user
+    totalIncorrect += seasonIncorrect
+    dbUserPath = 'users/' + UIDs[user]
+    dbLastSeasonPath = 'users/' + UIDs[user] + '/seasons/' + seasonId
+    root.child(dbLastSeasonPath).update({ #update database to hold number of correct and incorrect picks for the last season
+        'correct' : seasonCorrect,
+        'incorrect' : seasonIncorrect
+    })
+    root.child(dbUserPath).update({ #update the total number of correct and incorrect picks for the user in the database
+        'correct' : totalCorrect,
+        'incorrect' : totalIncorrect
+    })

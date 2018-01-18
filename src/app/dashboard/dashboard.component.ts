@@ -37,7 +37,7 @@ export class DashboardComponent implements OnInit {
       xAxes: [{
         scaleLabel: {
           display: true,
-          labelString: 'Week',
+          labelString: 'Week            ', //spaces temporary fix to center this on the graph instead of x-axis
           fontSize: 16
         },
       }]
@@ -55,6 +55,7 @@ export class DashboardComponent implements OnInit {
 
   // This is the data for the bar graph to display before the data from firebase comes in
   public picksByWeekBarChartData: any[] = [
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2014-2015' },
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2015-2016' },
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2016-2017' },
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2017-2018' }
@@ -72,7 +73,7 @@ export class DashboardComponent implements OnInit {
 
       var allSeasonData: any[] = []; //an array that holds the data for all seasons that the bar graph will display
       var allTrendData: any[] = []; //an array that holds the data for the trend of data by week that the bar graph will display
-      let seasonIdsArray = ['2015-2016', '2016-2017', '2017-2018']; //an array of ids for each season
+      let seasonIdsArray = ['2014-2015', '2015-2016', '2016-2017', '2017-2018']; //an array of ids for each season
       let numberOfSeasons = seasonIdsArray.length
 
       //an array that will hold the data for each week across all seasons
@@ -104,7 +105,7 @@ export class DashboardComponent implements OnInit {
 
             //get trend data by finding average of all weeks
             for (let j in trendDataArray) {
-              trendDataArray[Number(j)] = Number((trendDataArray[Number(j)] / 3).toFixed(2));
+              trendDataArray[Number(j)] = Number((trendDataArray[Number(j)] / numberOfSeasons).toFixed(2));
             }
             console.log('filled in array', trendDataArray)
             allTrendData.push({ data: trendDataArray, label: 'Average by Week'}); //push the data to an empty array

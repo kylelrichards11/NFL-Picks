@@ -20,8 +20,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [ AuthGuard ] },
   { path: 'season/:seasonId', component: SeasonComponent, canActivate: [ AuthGuard ] },
   { path: 'choosePreviousPicks', component: ChoosePreviousPicksComponent, canActivate: [ AuthGuard ]},
-  { path: 'previousPicks/:seasonId/:weekId', component: PreviousPicksComponent, canActivate: [AuthGuard ]},
-  { path: 'makePicks/:seasonId/:weekId', component: MakePicksComponent, canActivate: [AuthGuard ]}
+  { path: 'previousPicks/:seasonId/:weekId', component: PreviousPicksComponent, canActivate: [ AuthGuard ]},
+  { path: 'makePicks/:seasonId/:weekId', component: MakePicksComponent, canActivate: [ AuthGuard ]}
 ];
 
 @NgModule({

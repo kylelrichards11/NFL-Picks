@@ -58,10 +58,10 @@ teams = {
 }
 
 monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-seasonURLArray = [2015, 2016, 2017]
-seasonDbArray = ["2015-2016", "2016-2017", "2017-2018"]
+seasonURLArray = [2014, 2015, 2016, 2017]
+seasonDbArray = ["2014-2015", "2015-2016", "2016-2017", "2017-2018"]
 
-for i in range(0, 3): #loop through 3 seasons
+for i in range(0, 4): #loop through 4 seasons
     root.child(seasonDbArray[i] + '/seasonInfo').update({
         'ended' : True,
         'seasonId' : seasonDbArray[i]

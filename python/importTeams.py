@@ -24,7 +24,7 @@ teams = {
     "Green Bay Packers" : "GB",
     "Houston Texans" : "HOU",
     "Indianapolis Colts" : "IND",
-    "Jacksonville Jaguars" : "JAC", #FOR 2015 CHANGE JAX TO JAC
+    "Jacksonville Jaguars" : "JAC", #For before 2016 use JAC, for 2016 on use JAX
     "Kansas City Chiefs" : "KC",
     "Los Angeles Rams" : "LA",
     "Los Angeles Chargers" : "LAC",
@@ -46,12 +46,12 @@ teams = {
     "Washington Redskins" : "WAS"
 }
 
-obj = untangle.parse('2015Data.xml') #CHANGE FILE NAME FOR EACH YEAR
+obj = untangle.parse('2014Data.xml') #CHANGE FILE NAME FOR EACH YEAR
 max = len(obj.root)
 for i in range(0, max):
     teamName = obj.root.row[i]['Team']
     teamId = teams[teamName]
-    dbPath = '2015-2016/teams/' + teamId #CHANGE PATH FOR EACH SEASON
+    dbPath = '2014-2015/teams/' + teamId #CHANGE PATH FOR EACH SEASON
     root.child(dbPath).update({
         'teamId' : teamId,
         'city' : obj.root.row[i]['City'],
