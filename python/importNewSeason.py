@@ -55,13 +55,18 @@ teams = {
 }
 
 monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-seasonURLArray = [2018]
-seasonDbArray = ["2018-2019"]
+seasonURLArray = [2019]
+seasonDbArray = ["2019-2020"]
 kyleUID = 'H3EI5DDrbldJEg2FxEk6N9oYnaf2'
 dadUID = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
-UIDs = [kyleUID, dadUID] #an array of our user ids
+sampleUID = '9OMOuqYE6Ncra2bMBptPpMnYwNt2'
+#UIDs = [kyleUID, dadUID] #an array of our user ids
+UIDs = [kyleUID, dadUID]
 userNames = ['Kyle', 'Dad']
 usersNum = len(UIDs) #number of users
+
+# Array that holds weeks that have finished (manual at the moment)
+finishedWeeks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 i = 0 
 root.child(seasonDbArray[i] + '/seasonInfo').update({
@@ -78,9 +83,12 @@ for j in range(1, 18): #loop through 17 weeks
     numberOfGames = len(obj.ss.gms)
     weekId = 'week' + str(j)
     dbWeekPath = seasonDbArray[i] + '/weeks/' + weekId
+    finishedWeek = False
+    if finishedWeeks[j-1] == 1:
+        finishedWeek = True
     root.child(dbWeekPath + '/weekInfo').update({
         'weekId' : weekId,
-        'ended' : False
+        'ended' : finishedWeek
     })
     for k in range(0, numberOfGames): #loop through games in week
         awayTeamId = obj.ss.gms.g[k]['v']
@@ -102,8 +110,8 @@ for j in range(1, 18): #loop through 17 weeks
             homeWinner = False
             awayWinner = False
         if gameStatus == 'F' or gameStatus == 'FO': #if the game has finished
-            finished = False
-            started = False
+            finished = True
+            started = True
             homeScore = obj.ss.gms.g[k]['hs']
             awayScore = obj.ss.gms.g[k]['vs']
             homeWinner = False
@@ -160,9 +168,9 @@ for i in range(0, 31):
         'pointsFor' : 0,
         'pointsAgainst' : 0
     })
-for user in range(0, usersNum): #for each user
-    print userNames[user]
-    dbUserPath = 'users/' + UIDs[user] + '/seasons/' + seasonDbArray[0]
+for user in UIDs:
+    print(user)
+    dbUserPath = 'users/' + user + '/seasons/' + seasonDbArray[0]
     root.child(dbUserPath).update({
         'correct' : 0,
         'incorrect' : 0,
