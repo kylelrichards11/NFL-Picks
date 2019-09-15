@@ -16,7 +16,7 @@
           <a routerLink="/dashboard">Dashboard</a>
         </li>
         <li *ngIf="authService.isAuthenticated()">
-          <a routerLink="/makePicks/2017-2018/currentWeek">Make Picks</a>
+          <a routerLink="/makePicks">Make Picks</a>
         </li>
         <li *ngIf="authService.isAuthenticated()">
           <a (click)="signout()">Sign Out</a>

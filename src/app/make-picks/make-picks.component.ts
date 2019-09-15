@@ -16,18 +16,12 @@ export class MakePicksComponent implements OnInit {
   weekId
   userId
   weekDisplay
-  invalidSeasonAndWeek = true;
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params: Params) => {
-      this.seasonId = params['seasonId'];
-      this.weekId = params['weekId'];
-    });
-    if((this.seasonId != 'undefined') && (this.weekId != 'undefined')) {
-      this.invalidSeasonAndWeek = false;
-    }
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
+      this.seasonId = '2019-2020'
+      this.weekId = 'currentWeek'
     });
     if(this.weekId === 'currentWeek') {
       this.weekDisplay = 'Current Week'
@@ -36,6 +30,10 @@ export class MakePicksComponent implements OnInit {
       var weekIdArray = this.weekId.split(/(\d+)/);
       this.weekDisplay = 'Week ' + String(weekIdArray[1]);
     }
+  }
+
+  reload() {
+    location.reload();
   }
 
 }

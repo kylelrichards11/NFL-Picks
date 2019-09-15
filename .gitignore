@@ -34,6 +34,8 @@ npm-debug.log
 testem.log
 /typings
 /python/NFL-Picks-11f89026ddbd.json
+python3/venv/
+python3/config.json
 
 # e2e
 /e2e/*.js

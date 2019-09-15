@@ -66,7 +66,7 @@ userNames = ['Kyle', 'Dad']
 usersNum = len(UIDs) #number of users
 
 # Array that holds weeks that have finished (manual at the moment)
-finishedWeeks = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+finishedWeeks = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 i = 0 
 root.child(seasonDbArray[i] + '/seasonInfo').update({
@@ -168,7 +168,7 @@ for i in range(0, 31):
         'pointsFor' : 0,
         'pointsAgainst' : 0
     })
-for user in UIDs:
+'''for user in UIDs:
     print(user)
     dbUserPath = 'users/' + user + '/seasons/' + seasonDbArray[0]
     root.child(dbUserPath).update({
@@ -183,4 +183,4 @@ for user in UIDs:
             'incorrect' : 0,
             'weekId' : 'week' + str(week)
         })
-
+'''

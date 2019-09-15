@@ -11,10 +11,10 @@ firebase_admin.initialize_app(cred, {
 root = db.reference()
 
 #gamesXML = 'http://www.nfl.com/liveupdate/scorestrip/ss.xml'
-gamesXML = 'testXML.xml'
-#gamesXML = 'http://www.nfl.com/ajax/scorestrip?season=2017&seasonType=REG&week=17'
+#gamesXML = 'testXML.xml'
+gamesXML = 'http://www.nfl.com/ajax/scorestrip?season=2018&seasonType=REG&week=1'
 
-obj = untangle.parse(gamesXML) #make an object from the XML import
+obj = untangle.parse('currentWeek.xml') #make an object from the XML import
 
 seasonYearA = int(obj.ss.gms['y']) #the XML only contains the first year e.g. 2015, but the database uses 2015-2016
 seasonYearB = seasonYearA + 1      #as the id, so we need to make that id with the second year
@@ -24,6 +24,11 @@ weekNum = int(obj.ss.gms['w'])
 weekId = 'week' + str(weekNum)
 
 dbWeekPath = seasonId + '/weeks/' + weekId #make the db path for the week, ex: '2015-2016/weeks/week1'
+
+KyleId = 'H3EI5DDrbldJEg2FxEk6N9oYnaf2'
+DadId = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
+
+UserIds = [KyleId, DadId]
 
 numberOfGames = len(obj.ss.gms)
 
@@ -42,6 +47,7 @@ for it in range(0, numberOfGames):
     finishedGameArray.append(False)
 
 while True:
+    obj = untangle.parse('currentWeek.xml')
     for i in range(0, numberOfGames): #iterate through each game
         gameId = obj.ss.gms.g[i]['gsis']
         homeTeamId = obj.ss.gms.g[i]['h']
@@ -51,6 +57,7 @@ while True:
         dbGamePath = dbWeekPath + '/games/' + gameId
         dbHomePath = dbGamePath + '/home'
         dbAwayPath = dbGamePath + '/away'
+        print homePoints
         root.child(dbHomePath).update({ #update the home score
             'points' : homePoints
         })
@@ -63,13 +70,13 @@ while True:
             gameStarted = root.child(dbGamePath).update({ #mark that the game has started in the database
                 'started' : True
             })
-        elif obj.ss.gms.g[i]['q'] == 'F' and (not finishedGameArray[i]): #if the game has ended and the game is not in the game finished array
+        elif (obj.ss.gms.g[i]['q'] == 'F' or obj.ss.gms.g[i]['q'] == 'FO') and (not finishedGameArray[i]): #if the game has ended and the game is not in the game finished array
             dbGameFinishedPath = dbGamePath + '/ended'
             prevFinished = root.child(dbGameFinishedPath).get()
             if not prevFinished: #if the database does not have the game as finished
-                print 'gameFinished', gameId #mark that the game has ended in the database
+                print 'gameFinished', gameId 
                 finishedGameArray[i] = True
-                root.child(dbGamePath).update({
+                root.child(dbGamePath).update({ #mark that the game has ended in the database
                     'ended' : True
                 })
                 homePoints = int(obj.ss.gms.g[i]['hs'])
@@ -185,5 +192,11 @@ while True:
                         'pointsFor' : prevAwayPointsFor + awayPoints,
                         'pointsAgainst' : prevAwayPointsAgainst + homePoints
                     })
+            # Update total wins and loses for users
+#            for userId in UserIds:
+                # Figure out if they got this game correct
+#                thisGamePickDbPath = 'users/' + userId + '/seasons/' + seasonId + '/weeks/' + weekId + '/' + gameId + '/pick'
+#                userPick = root.child(thisGamePickDbPath).get()
+
     print 'sleeping'
     time.sleep(5) #sleep for 5 seconds

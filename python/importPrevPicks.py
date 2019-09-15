@@ -81,9 +81,12 @@ obj = untangle.parse('picks.xml')
 
 kyleUID = 'H3EI5DDrbldJEg2FxEk6N9oYnaf2'
 dadUID = 'wzht1HEeVZdTSw61qM6jS2j7TqN2'
+sampleUID = '9OMOuqYE6Ncra2bMBptPpMnYwNt2'
 
-UIDs = [kyleUID, dadUID] #an array of our user ids
-userNames = ['Kyle', 'Dad']
+#UIDs = [kyleUID, dadUID] #an array of our user ids
+UIDs = [sampleUID]
+#userNames = ['Kyle', 'Dad']
+userNames = ['Kyle']
 usersNum = len(UIDs) #number of users
 
 gameIds = [56169, 56502, 56900, 57233] #this array holds the number before the first game id of each season

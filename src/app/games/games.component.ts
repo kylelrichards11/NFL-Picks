@@ -14,6 +14,7 @@ export class GamesComponent implements OnInit {
   @Input() seasonId: string;
   @Input() weekId: string;
   @Input() userId: string;
+  @Input() showWeeks: boolean;
 
   gameArray = new Array();
   userWeekPicks = false;
@@ -102,10 +103,15 @@ export class GamesComponent implements OnInit {
 
   pickTeam(teamCity, teamName, gameId) {
     var pick = teamCity + " " + teamName;
-    this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/' + gameId).update({ pick: pick });
+    this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/' + gameId).update({ pick: pick });
   }
 
   clearPicks() {
     this.adb.object<any>('/users/' + this.userId + '/seasons/' + this.seasonId + '/weeks/' + this.weekId + '/games/').remove();
+  }
+
+  changeWeek(newWeek) {
+    this.weekId = newWeek;
+    this.ngOnInit();
   }
 }
