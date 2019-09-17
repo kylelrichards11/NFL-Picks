@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
-import { DatabaseReference } from 'angularfire2/database/interfaces';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Game } from '../classes/game';
 import { AuthService } from '../services/auth.service';
 
 @Component({

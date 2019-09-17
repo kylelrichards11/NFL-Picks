@@ -1,9 +1,5 @@
 import { environment } from '../environments/environment';
 
-//NG2-MATERIALIZE MODULES
-import { MzSelectModule, MzSelectDirective } from 'ng2-materialize';
-import { MzValidationModule } from 'ng2-materialize';
-
 // MODULES
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,33 +22,32 @@ import { AuthGuard } from './guards/auth.guard';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { GamesComponent } from './games/games.component';
-import { SeasonComponent } from './season/season.component';
-import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
 import { ChoosePreviousPicksComponent } from './choose-previous-picks/choose-previous-picks.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
+import { GamesComponent } from './games/games.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { MakePicksComponent } from './make-picks/make-picks.component';
-
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
+import { SeasonComponent } from './season/season.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    MenuBarComponent,
-    FooterComponent,
-    LoginComponent,
-    SignupComponent,
-    DashboardComponent,
-    GamesComponent,
-    SeasonComponent,
-    PreviousPicksComponent,
     ChoosePreviousPicksComponent,
-    MakePicksComponent
+    DashboardComponent,
+    FooterComponent,
+    GamesComponent,
+    HomeComponent,
+    LoginComponent,
+    MakePicksComponent,
+    MenuBarComponent,
+    PreviousPicksComponent,
+    SeasonComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -62,12 +57,12 @@ import { MakePicksComponent } from './make-picks/make-picks.component';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     FormsModule,
-    MzSelectModule,
     ReactiveFormsModule,
-    MzValidationModule,
-    ChartsModule
+    ChartsModule,
+    MaterializeModule
   ],
   providers: [DatabaseService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

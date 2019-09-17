@@ -1,10 +1,8 @@
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/from';
-import 'rxjs/add/operator/take';
-import 'rxjs/add/operator/do';
+import { Observable, from } from 'rxjs';
+import { take, map, tap } from 'rxjs/operators'
 
 @Injectable()
 export class AuthService {
@@ -15,9 +13,9 @@ export class AuthService {
   }
 
   public getUserId() {
-    return Observable.from(this.afAuth.authState)
-      .take(1)
-      .map(user => user.uid);
+    return from(this.afAuth.authState)
+      .pipe(take(1))
+      .pipe(map(user => user.uid));
   }
 
   public isAuthenticated() {
@@ -31,9 +29,9 @@ export class AuthService {
   }
 
   public checkAuth() {
-    return Observable.from(this.afAuth.authState)
-      .take(1)
-      .map(user => !!user)
+    return from(this.afAuth.authState)
+      .pipe(take(1))
+      .pipe(map(user => !!user))
       .toPromise();
   }
 
@@ -42,7 +40,7 @@ export class AuthService {
       user.email,
       user.password
     ).then((saved_user) => {
-      this.saveUserToDb(saved_user.uid, user);
+      this.saveUserToDb(saved_user.user.uid, user);
     });
   }
 

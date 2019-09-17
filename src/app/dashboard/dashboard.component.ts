@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   constructor(public authService: AuthService, public adb: AngularFireDatabase) { }
 
   userId;
-  userHistory;
+  userHistory; 
   percentCorrect = '0';
   correctPicksByWeekButtonText = 'Show Average'
   showTrend = false;

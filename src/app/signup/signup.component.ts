@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../classes/user';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 

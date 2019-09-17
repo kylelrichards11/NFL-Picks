@@ -4,20 +4,21 @@
   </div>
   <form (ngSubmit)="redirectToPicks()">
     <div class="row center-align">
-      <div class="col s12 m6 validate input-field">
-        <mz-select-container>
-          <select mz-select required id="options-select" [(ngModel)]="this.seasonId" name="seasonId" placeholder="Choose Season" errorMessageResource="required">
-            <option>2014-2015</option>
-            <option>2015-2016</option>
-            <option>2016-2017</option>
-            <option>2017-2018</option>
-            <option>2018-2019</option>
-          </select>
-        </mz-select-container>
+      <div class="col s12 m6 validate input-field" (click)="fixClose()">
+        <select required materialize="material_select" [(ngModel)]="this.seasonId" [ngModelOptions]="{standalone: true}">
+            <option disabled selected>Select Season</option>
+            <option color="Black">2014 - 2015</option>
+            <option>2015 - 2016</option>
+            <option>2016 - 2017</option>
+            <option>2017 - 2018</option>
+            <option>2018 - 2019</option>
+            <option>2019 - 2020</option>
+        </select>
+
       </div>
-      <div class="col s12 m6 validate input-field">
-        <mz-select-container>
-          <select mz-select required id="options-select" [(ngModel)]="this.weekId" name="weekId" placeholder="Choose Week" errorMessageResource="required">
+      <div class="col s12 m6 validate input-field" (click)="fixClose()">
+        <select required materialize="material_select" [(ngModel)]="this.weekId" [ngModelOptions]="{standalone: true}">
+            <option disabled selected>Select Week</option>
             <option>Week 1</option>
             <option>Week 2</option>
             <option>Week 3</option>
@@ -35,8 +36,7 @@
             <option>Week 15</option>
             <option>Week 16</option>
             <option>Week 17</option>
-          </select>
-        </mz-select-container>
+        </select>
       </div>
     </div>
     <div class="row center-align">

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MzSelectModule } from 'ng2-materialize'
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,13 +13,16 @@ export class ChoosePreviousPicksComponent implements OnInit {
   seasonId
   weekId
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  fixClose() {
+    event.stopPropagation()
   }
 
   redirectToPicks(){
     let weekIdArray = this.weekId.split(/(\d+)/)
     let weekNum = weekIdArray[1];
-    let path="previousPicks/" + this.seasonId + '/week' + weekNum
+    let path="previousPicks/" + this.seasonId.replace(/\s/g, "") + '/week' + weekNum
     this.router.navigate([path]);
   }
 }
