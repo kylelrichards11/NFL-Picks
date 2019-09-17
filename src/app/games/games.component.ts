@@ -97,10 +97,10 @@ export class GamesComponent implements OnInit {
     });
     if(!this.userId) {
         this.authService.getUserId().subscribe(user_id => {
-        this.userId = user_id;
-        this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
-            this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
-            this.gotData = true;
+            this.userId = user_id;
+            this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
+                this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
+                this.gotData = true;
         });
         this.makePicks = true;
         });

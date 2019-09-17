@@ -12,7 +12,7 @@ import { PreviousPicksComponent } from './previous-picks/previous-picks.componen
 import { MakePicksComponent } from './make-picks/make-picks.component';
 import { ChooseComparePicksComponent } from './choose-compare-picks/choose-compare-picks.component'
 import { ComparePicksComponent } from './compare-picks/compare-picks.component'
-
+import { CompareRecordsComponent } from './compare-records/compare-records.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'previousPicks/:seasonId/:weekId', component: PreviousPicksComponent, canActivate: [ AuthGuard ]},
   { path: 'makePicks', component: MakePicksComponent, canActivate: [ AuthGuard ]},
   { path: 'chooseComparePicks', component: ChooseComparePicksComponent, canActivate: [ AuthGuard ]},
-  { path: 'comparePicks/:seasonId/:weekId', component: ComparePicksComponent, canActivate: [ AuthGuard ]}
+  { path: 'comparePicks/:seasonId/:weekId', component: ComparePicksComponent, canActivate: [ AuthGuard ]},
+  { path: 'compareRecords', component: CompareRecordsComponent, canActivate: [ AuthGuard ]}
 ];
 
 @NgModule({

@@ -36,4 +36,9 @@ export class ChooseComparePicksComponent implements OnInit {
         this.router.navigate([path]);
     }
 
+    compareAllTime(){
+        let path="compareRecords"
+        this.router.navigate([path])
+    }
+
 }

@@ -35,6 +35,7 @@ import { SeasonComponent } from './season/season.component';
 import { SignupComponent } from './signup/signup.component';
 import { ComparePicksComponent } from './compare-picks/compare-picks.component';
 import { ChooseComparePicksComponent } from './choose-compare-picks/choose-compare-picks.component';
+import { CompareRecordsComponent } from './compare-records/compare-records.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ChooseComparePicksComponent } from './choose-compare-picks/choose-compa
     SeasonComponent,
     SignupComponent,
     ComparePicksComponent,
-    ChooseComparePicksComponent
+    ChooseComparePicksComponent,
+    CompareRecordsComponent
   ],
   imports: [
     BrowserModule,
