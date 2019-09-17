@@ -33,6 +33,8 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { PreviousPicksComponent } from './previous-picks/previous-picks.component';
 import { SeasonComponent } from './season/season.component';
 import { SignupComponent } from './signup/signup.component';
+import { ComparePicksComponent } from './compare-picks/compare-picks.component';
+import { ChooseComparePicksComponent } from './choose-compare-picks/choose-compare-picks.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { SignupComponent } from './signup/signup.component';
     MenuBarComponent,
     PreviousPicksComponent,
     SeasonComponent,
-    SignupComponent
+    SignupComponent,
+    ComparePicksComponent,
+    ChooseComparePicksComponent
   ],
   imports: [
     BrowserModule,

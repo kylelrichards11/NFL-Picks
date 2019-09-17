@@ -14,6 +14,8 @@ export class GamesComponent implements OnInit {
   @Input() weekId: string;
   @Input() userId: string;
   @Input() showWeeks: boolean;
+  @Input() user: string;
+  @Input() showUnstarted: boolean
 
   gameArray = new Array();
   userWeekPicks = false;
@@ -24,6 +26,10 @@ export class GamesComponent implements OnInit {
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
   ngOnInit() {
+
+    if(this.showUnstarted == null){
+        this.showUnstarted = true;
+    }
 
     if (this.weekId === 'currentWeek') { //if the component input wants the current week
       // subscribe to all weeks in the season
@@ -89,15 +95,23 @@ export class GamesComponent implements OnInit {
         }
       })
     });
-
-    this.authService.getUserId().subscribe(user_id => {
-      this.userId = user_id;
-      this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
-        this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
-        this.gotData = true;
-      });
-      this.makePicks = true;
-    });
+    if(!this.userId) {
+        this.authService.getUserId().subscribe(user_id => {
+        this.userId = user_id;
+        this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
+            this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
+            this.gotData = true;
+        });
+        this.makePicks = true;
+        });
+    }
+    else{
+        this.adb.object<any>('/users/' + this.userId).valueChanges().subscribe(user => {
+            this.userWeekPicks = user.seasons[this.seasonId].weeks[this.weekId];
+            this.gotData = true;
+        });
+        this.makePicks = true;   
+    }
   }
 
   pickTeam(teamCity, teamName, gameId) {

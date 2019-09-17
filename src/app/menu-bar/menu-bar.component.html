@@ -3,11 +3,14 @@
     <div class="nav-wrapper">
       <a routerLink="/home" class="brand-logo left">NFL Picks</a>
       <ul id="nav-mobile" class="right">
-        <li *ngIf="authService.isAuthenticated()">
-          <a routerLink="/choosePreviousPicks">View Previous Picks</a>
-        </li>
         <li *ngIf="!authService.isAuthenticated()">
           <a routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="authService.isAuthenticated()">
+          <a routerLink="/chooseComparePicks">Compare Picks</a>
+        </li>
+        <li *ngIf="authService.isAuthenticated()">
+          <a routerLink="/choosePreviousPicks">View Previous Picks</a>
         </li>
         <li *ngIf="!authService.isAuthenticated()">
           <a routerLink="/signup">Sign Up</a>
