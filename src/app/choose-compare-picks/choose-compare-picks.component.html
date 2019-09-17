@@ -1,53 +1,52 @@
 <div class="container">
     <div class="row center-align">
-      <h3>Compare Picks from Previous Weeks</h3>
+        <h3>Compare Picks from Previous Weeks</h3>
     </div>
     <div class="row center-align">
-      <h5>Current Week</h5>
-      <button class="btn btn-lg btn-primary btn-block center-align" style="text-align: center" (click)="compareCurrentWeek()" id="currWeekBtn">Compare</button>
-    </div>
-    <div class="row center-align">
-      <h5>Select Other Week</h5>
+        <h5>Select Week</h5>
     </div>
     <form (ngSubmit)="redirectToPicks()">
-      <div class="row center-align">
-        <div class="col s12 m6 validate input-field" (click)="fixClose()">
-          <select required materialize="material_select" [(ngModel)]="this.seasonId" [ngModelOptions]="{standalone: true}">
-              <option disabled selected>Select Season</option>
-              <option color="Black">2014 - 2015</option>
-              <option>2015 - 2016</option>
-              <option>2016 - 2017</option>
-              <option>2017 - 2018</option>
-              <option>2018 - 2019</option>
-              <option>2019 - 2020</option>
-          </select>
-  
+        <div class="row center-align">
+            <div class="col s12 m6 validate input-field" (click)="fixClose()">
+                <select required materialize="material_select" [(ngModel)]="this.seasonId"
+                    [ngModelOptions]="{standalone: true}">
+                    <option disabled selected>Select Season</option>
+                    <option color="Black">2014 - 2015</option>
+                    <option>2015 - 2016</option>
+                    <option>2016 - 2017</option>
+                    <option>2017 - 2018</option>
+                    <option>2018 - 2019</option>
+                    <option>2019 - 2020</option>
+                </select>
+
+            </div>
+            <div class="col s12 m6 validate input-field" (click)="fixClose()">
+                <select required materialize="material_select" [(ngModel)]="this.weekId"
+                    [ngModelOptions]="{standalone: true}">
+                    <option disabled selected>Select Week</option>
+                    <option>Week 1</option>
+                    <option>Week 2</option>
+                    <option>Week 3</option>
+                    <option>Week 4</option>
+                    <option>Week 5</option>
+                    <option>Week 6</option>
+                    <option>Week 7</option>
+                    <option>Week 8</option>
+                    <option>Week 9</option>
+                    <option>Week 10</option>
+                    <option>Week 11</option>
+                    <option>Week 12</option>
+                    <option>Week 13</option>
+                    <option>Week 14</option>
+                    <option>Week 15</option>
+                    <option>Week 16</option>
+                    <option>Week 17</option>
+                </select>
+            </div>
         </div>
-        <div class="col s12 m6 validate input-field" (click)="fixClose()">
-          <select required materialize="material_select" [(ngModel)]="this.weekId" [ngModelOptions]="{standalone: true}">
-              <option disabled selected>Select Week</option>
-              <option>Week 1</option>
-              <option>Week 2</option>
-              <option>Week 3</option>
-              <option>Week 4</option>
-              <option>Week 5</option>
-              <option>Week 6</option>
-              <option>Week 7</option>
-              <option>Week 8</option>
-              <option>Week 9</option>
-              <option>Week 10</option>
-              <option>Week 11</option>
-              <option>Week 12</option>
-              <option>Week 13</option>
-              <option>Week 14</option>
-              <option>Week 15</option>
-              <option>Week 16</option>
-              <option>Week 17</option>
-          </select>
+        <div class="row center-align">
+            <button class="btn btn-lg btn-primary btn-block center-align" style="text-align: center" type="submit"
+                id="goBtn">Go</button>
         </div>
-      </div>
-      <div class="row center-align">
-          <button class="btn btn-lg btn-primary btn-block center-align" style="text-align: center" type="submit" id="goBtn">Go</button>
-      </div>
     </form>
-  </div>
+</div>

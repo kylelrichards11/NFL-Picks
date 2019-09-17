@@ -19,6 +19,7 @@ export class ComparePicksComponent implements OnInit {
     weekNum
     invalidSeasonAndWeek = true;
     showGames = false;
+    otherUserName
   
     ngOnInit() {
       this.activatedRoute.params.subscribe((params: Params) => {
@@ -32,9 +33,11 @@ export class ComparePicksComponent implements OnInit {
         this.userId = user_id;
         if(this.userId == "H3EI5DDrbldJEg2FxEk6N9oYnaf2") {
             this.otherUserId = "wzht1HEeVZdTSw61qM6jS2j7TqN2"
+            this.otherUserName = "Jay"
         }
         else {
             this.otherUserId = "H3EI5DDrbldJEg2FxEk6N9oYnaf2"
+            this.otherUserName = "Kyle"
         }
         this.showGames = true;
         });
