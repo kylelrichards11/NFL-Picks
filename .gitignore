@@ -46,3 +46,6 @@ python3/config.json
 Thumbs.db
 
 /src/environments
+
+.firebase/*
+*.pem
