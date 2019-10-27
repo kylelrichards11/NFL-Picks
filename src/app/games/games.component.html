@@ -124,16 +124,22 @@
                         <!-- if the game has not ended -->
                         <div *ngIf="!game.ended">
                           <!-- if the user picked away team -->
-                          <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
-                            <a class="waves-effect waves-light btn picked">Picked</a>
-                          </div>
+                            <div *ngIf="userWeekPicks[game.gameId].pick == game.away.city + ' ' + game.away.name">
+                              <div *ngIf="!game.started">
+                                <div *ngIf="showUnstarted">
+                                  <a class="waves-effect waves-light btn picked">Picked</a>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                         <!-- if the user did not pick away team -->
                         <div *ngIf="userWeekPicks[game.gameId].pick != game.away.city + ' ' + game.away.name">
 
                           <!-- if the game has not yet started -->
                           <div *ngIf="!game.started">
-                            <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                            <div *ngIf="showUnstarted">
+                              <a class="waves-effect waves-light btn" (click)="pickTeam(game.away.city, game.away.name, game.gameId)">Choose</a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -158,12 +164,16 @@
 
                         <!-- if the game has not ended -->
                         <div *ngIf="!game.ended">
-                          <!-- if the user picked away team -->
+                          <!-- if the user picked home team -->
                           <div *ngIf="userWeekPicks[game.gameId].pick == game.home.city + ' ' + game.home.name">
-                            <a class="waves-effect waves-light btn picked">Picked</a>
+                            <div *ngIf="!game.started">
+                              <div *ngIf="showUnstarted">
+                                <a class="waves-effect waves-light btn picked">Picked</a>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <!-- if the user did not pick away team -->
+                        <!-- if the user did not pick home team -->
                         <div *ngIf="userWeekPicks[game.gameId].pick != game.home.city + ' ' + game.home.name">
 
                           <!-- if the game has not yet started -->

@@ -66,7 +66,7 @@ userNames = ['Kyle', 'Dad']
 usersNum = len(UIDs) #number of users
 
 # Array that holds weeks that have finished (manual at the moment)
-finishedWeeks = [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+finishedWeeks = [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 i = 0 
 root.child(seasonDbArray[i] + '/seasonInfo').update({
