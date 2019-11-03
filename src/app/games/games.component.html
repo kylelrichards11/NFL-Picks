@@ -130,6 +130,9 @@
                                   <a class="waves-effect waves-light btn picked">Picked</a>
                                 </div>
                               </div>
+                              <div *ngIf="game.started">
+                                  <a class="waves-effect waves-light btn picked">Picked</a>
+                              </div>
                             </div>
                         </div>
                         <!-- if the user did not pick away team -->
@@ -170,6 +173,9 @@
                               <div *ngIf="showUnstarted">
                                 <a class="waves-effect waves-light btn picked">Picked</a>
                               </div>
+                            </div>
+                            <div *ngIf="game.started">
+                                <a class="waves-effect waves-light btn picked">Picked</a>
                             </div>
                           </div>
                         </div>
