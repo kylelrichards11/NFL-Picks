@@ -37,3 +37,7 @@ p {
     font-size: 2em;
     font-weight: 320;
 }
+
+.weekOption {
+    margin-left: 3px;
+}

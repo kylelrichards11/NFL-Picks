@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  seasonId = '2019-2020';
+  seasonId = '2020-2021';
   weekId = 'currentWeek';
 
   constructor(public dbSrv: DatabaseService, public adb: AngularFireDatabase, public authService: AuthService) { }

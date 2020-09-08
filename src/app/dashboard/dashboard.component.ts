@@ -60,7 +60,8 @@ export class DashboardComponent implements OnInit {
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2016-2017' },
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2017-2018' },
     { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2018-2019' },
-    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2019-2020' }
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2019-2020' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: '2020-2021' },
   ];
 
   picksByWeekBarChartTrendData: any[] = [{ data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Trend by Week' }]
@@ -75,7 +76,7 @@ export class DashboardComponent implements OnInit {
 
       var allSeasonData: any[] = []; //an array that holds the data for all seasons that the bar graph will display
       var allTrendData: any[] = []; //an array that holds the data for the trend of data by week that the bar graph will display
-      let seasonIdsArray = ['2014-2015', '2015-2016', '2016-2017', '2017-2018', '2018-2019', '2019-2020']; //an array of ids for each season
+      let seasonIdsArray = ['2014-2015', '2015-2016', '2016-2017', '2017-2018', '2018-2019', '2019-2020', '2020-2021']; //an array of ids for each season
       let numberOfSeasons = seasonIdsArray.length
 
       //an array that will hold the data for each week across all seasons

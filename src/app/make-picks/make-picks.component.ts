@@ -19,7 +19,7 @@ export class MakePicksComponent implements OnInit {
   ngOnInit() {
     this.authService.getUserId().subscribe(user_id => {
       this.userId = user_id;
-      this.seasonId = '2019-2020'
+      this.seasonId = '2020-2021'
       this.weekId = 'currentWeek'
     });
     if(this.weekId === 'currentWeek') {

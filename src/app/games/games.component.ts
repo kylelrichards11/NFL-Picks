@@ -22,6 +22,7 @@ export class GamesComponent implements OnInit {
   gotData = false;
   weekHasStarted = true;
   makePicks = false;
+  weekNum;
 
   constructor(public adb: AngularFireDatabase, public authService: AuthService) { }
 
@@ -52,6 +53,7 @@ export class GamesComponent implements OnInit {
         //if the array is empty, then all weeks must have ended
         if (!notEndedWeekArray.length) {
           this.weekId = 'week17'; //if the season has ended, display the last week
+          this.weekNum = '17';
         }
 
         //if the array is not empty, then there must be weeks that have not ended
@@ -65,11 +67,13 @@ export class GamesComponent implements OnInit {
           }
           // once we have the lowest week number that has not ended, 
           this.weekId = 'week' + String(minNum); //append that number to 'week' to make the weekId
+          this.weekNum = String(minNum);
         }
         this.getWeekGameInfo(); //get the games for the weekId to display
       });
     }
     else { //if we already know the weekId we want
+      this.weekNum = this.weekId.substr(4)
       this.getWeekGameInfo(); //get the games for the weekId to display
     }
   }
@@ -81,8 +85,8 @@ export class GamesComponent implements OnInit {
       games.forEach(game => {
 
         //get home and away team name for image 
-        var homeImgPath = "../assets/teamLogos/" + game.home.name.toLowerCase() + ".png"
-        var awayImgPath = "../assets/teamLogos/" + game.away.name.toLowerCase() + ".png"
+        var homeImgPath = "../assets/teamLogos/" + game.home.name.toLowerCase().replace(/\s/g, "") + ".png"
+        var awayImgPath = "../assets/teamLogos/" + game.away.name.toLowerCase().replace(/\s/g, "") + ".png"
 
         let uniqueGame = new Game(game.home, game.away, game.gameId, game.date, game.time, game.started, game.ended, homeImgPath, awayImgPath);
         this.gameArray.push(uniqueGame);
