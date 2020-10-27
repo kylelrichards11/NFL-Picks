@@ -419,5 +419,68 @@ class Firebase():
         games_ref = db.reference(f"{year_id}/weeks/{week_id}/games/")
         return list(games_ref.get().keys())
 
+    def undo_end_game(self, year_id, week_id, game_id):
+        """ Undoes an end_game in case incorrect information was entered 
+        
+        Parameters
+        ----------
+        year_id : str - the year of the game to undo
+
+        week_id : str - the week of the game to undo
+
+        game_id : str - the id of the game to undo
+
+        Returns
+        -------
+        None
+        """
+        game_ref = db.reference(f"{year_id}/weeks/{week_id}/games/{game_id}")
+        game_ref.update({
+            "started" : False,
+            "ended" : False
+        })
+
+        game = game_ref.get()
+
+        away_score = game["away"]["points"]
+        home_score = game["home"]["points"]
+
+        tie = away_score == home_score
+        away_win = away_score > home_score
+        home_win = away_score < home_score
+
+        winner_key = "away" if away_win else "home"
+        winner_name = None if tie else f"{game[winner_key]['city']} {game[winner_key]['name']}"
+
+
+        if away_win:
+            self.set_team_record(year_id, week_id, game["away"]["name"], game["away"]["wins"] - 1, game["away"]["losses"], game["away"]["ties"])
+            self.set_team_record(year_id, week_id, game["home"]["name"], game["home"]["wins"], game["home"]["losses"] - 1, game["home"]["ties"])
+        elif home_win:
+            self.set_team_record(year_id, week_id, game["away"]["name"], game["away"]["wins"], game["away"]["losses"] - 1, game["away"]["ties"])
+            self.set_team_record(year_id, week_id, game["home"]["name"], game["home"]["wins"] - 1, game["home"]["losses"], game["home"]["ties"])
+        else:
+            self.set_team_record(year_id, week_id, game["away"]["name"], game["away"]["wins"], game["away"]["losses"], game["away"]["ties"] - 1)
+            self.set_team_record(year_id, week_id, game["home"]["name"], game["home"]["wins"], game["home"]["losses"], game["home"]["ties"] - 1)
+
+        away_ref = db.reference(f"{year_id}/weeks/{week_id}/games/{game_id}/away")
+        home_ref = db.reference(f"{year_id}/weeks/{week_id}/games/{game_id}/home")
+
+        away_ref.update({
+            "points": "",
+            "winner": False
+        })
+        home_ref.update({
+            "points": "",
+            "winner": False
+        })
+        for user in self.users:
+            user_pick = db.reference(f"users/{user}/seasons/{year_id}/weeks/{week_id}/{game_id}/pick").get()
+            if user_pick == winner_name:
+                self.dec_user_correct(user, year_id, week_id)
+            else:
+                self.dec_user_incorrect(user, year_id, week_id)
+
+
 if __name__ == "__main__":
     fb = Firebase()
